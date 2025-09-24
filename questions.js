@@ -1,62 +1,63 @@
 const questions = [
     {
-        question: "越南的首都叫什么名字?",
-        answers: ["胡志明市", "河内", "岘港", "海防"],
-        correct: "河内",
+        question: "这是什么?",
+        answers: ["电脑 (diànnǎo)", "电话 (diànhuà)", "电灯 (diàndēng)", "电影 (diànyǐng)"],
+        correct: "电脑 (diànnǎo)",
         image: "images/hanoi.jpg" // Thêm trường image với đường dẫn đến ảnh
     },
     {
-        question: "越南著名的下龙湾位于哪个省?",
-        answers: ["广宁省", "河内", "顺化市", "胡志明市"],
-        correct: "广宁省",
+        question: "这是什么?",
+        answers: ["纸巾 (zhǐjīn)", "报纸 (bàozhǐ)", "面巾 (miànjīn)", "毛巾 (máojīn)"],
+        correct: "纸巾 (zhǐjīn)",
         image: "images/biology.jpg" // Thêm trường image
     },
     {
-        question: "古代越南的国号“大越”始于哪个朝代？",
-        answers: ["陈朝", "黎朝", "李朝", "阮朝"],
-        correct: "李朝",
+        question: "这是什么？",
+        answers: ["手表 (shǒubiǎo)", "手机 (shǒujī)", "手套 (shǒutào)", "手链 (shǒuliàn)"],
+        correct: "手表 (shǒubiǎo)",
         image: "images/sunrise.jpg" // Thêm trường image
     },
     {
-        question: "越南的古都顺化位于哪条河的两岸?",
-        answers: ["红河", "湄公河", "香江", "北江"],
-        correct: "香江",
+        question: "这是什么?",
+        answers: ["牙刷 (yáshuā)", "牙膏 (yágāo)", "毛巾 (máojīn)", "梳子 (shūzi)"],
+        correct: "牙刷 (yáshuā)",
         image: "images/giza.jpg" // Thêm trường image
     },
     {
-        question: "奠边府战役发生在哪一年?",
-        answers: ["1945 年", "1954 年", "1968 年", "1975 年"],
-        correct: "1954 年",
+        question: "这是什么?",
+        answers: ["手机 (shǒujī)", "手表 (shǒubiǎo)", "电话 (diànhuà)", "电脑 (diànnǎo)"],
+        correct: "手机 (shǒujī)",
         image: "images/tiger.jpg"
     },
     {
-        question: "越南著名的美山圣地是哪个民族的古代遗址?",
+        question: "这是什么?",
         answers: ["占婆", "高棉", "京族", "苗族"],
         correct: "占婆",
         image: "images/india.jpg"
     },
     {
-        question: "越南的会安古城被列入世界文化遗产是哪一年?",
-        answers: ["1993 年", "1995 年", "1999 年", "2003 年"],
-        correct: "1999 年",
+        question: "这是什么?",
+        answers: ["牙膏 (yágāo)", "牙刷 (yáshuā)", "香皂 (xiāngzào)", "洗发水 (xǐfàshuǐ)"],
+        correct: "牙膏 (yágāo)",
         image: "images/kidney.jpg"
     },
     {
-        question: "在越南历史上,哪位将军在1954年被誉为抗法战争的民族英雄?",
-        answers: ["胡志明", "武元甲", "黎利", "陈兴道"],
-        correct: "武元甲",
+        question: "这是什么?",
+        answers: ["吹风机 (chuīfēngjī)", "洗衣机 (xǐyījī)", "空调 (kōngtiáo)", "电风扇 (diànfēngshàn)"],
+        correct: "吹风机 (chuīfēngjī)",
         image: "images/oxygen.jpg"
     },
     {
-        question: "下列哪一个是越南最长的河流?",
-        answers: ["红河", "湄公河", "香江", "北江"],
-        correct: "湄公河",
+        question: "这是什么?",
+        answers: ["衣服 (yīfu)", "裤子 (kùzi)", "裙子 (qúnzi)", "外套 (wàitào)"],
+        correct: "衣服 (yīfu)",
         image: "images/edison.jpg"
     },
     {
-        question: "越南的独立日是在哪一天?",
-        answers: ["9 月 2 日", "4 月 30 日", "8 月 19 日", "11 月 25 日"],
-        correct: "9 月 2 日",
+        question: "这是什么?",
+        answers: ["桌子 (zhuōzi)", "椅子 (yǐzi)", "凳子 (dèngzi)", "床 (chuáng)"],
+        correct: "桌子 (zhuōzi)",
         image: "images/mercury.jpg"
     }
+
 ];
