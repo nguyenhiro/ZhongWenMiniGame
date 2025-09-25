@@ -229,11 +229,6 @@
 
         document.addEventListener('DOMContentLoaded', showQuestion);
         restartButton.addEventListener('click', restartGame);
-
-        // Xóa đoạn code này để không hiển thị kỷ lục ban đầu
-        if (bestTime) {
-            bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây.`;
-            bestTimeElement.style.display = 'block';
         }
         // Hàm xáo trộn mảng (Fisher-Yates Shuffle)
         function shuffleArray(array) {
@@ -245,4 +240,5 @@
     </script>
 </body>
 </html>
+
 
