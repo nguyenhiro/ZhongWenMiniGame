@@ -216,10 +216,11 @@ const questions = [
     },
                 {
         question: "Đầu tư",
-        answers: ["投资 (tóuzī): Đầu tư", "亏损 (kuīsǔn)"],
-        correct: "投资 (tóuzī): Đầu tư",
+        answers: ["投资 (tóuzī)", "亏损 (kuīsǔn)"],
+        correct: "投资 (tóuzī)",
     }
 ];
+
 
 
 
