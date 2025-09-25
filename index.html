@@ -49,7 +49,7 @@
         }
         .answers {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr; /* Sửa để hiển thị 2 nút dạng cột */
             gap: 10px;
         }
         .answer-btn {
@@ -99,8 +99,6 @@
         <h2 id="question">Câu hỏi sẽ hiển thị ở đây.</h2>
         <img id="question-image" src="" alt="Hình ảnh câu hỏi" style="display: none; max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 8px;">
         <div class="answers">
-            <button class="answer-btn"></button>
-            <button class="answer-btn"></button>
             <button class="answer-btn"></button>
             <button class="answer-btn"></button>
         </div>
@@ -180,18 +178,22 @@
                 questionImageElement.style.display = 'none';
             }
 
-            // Xáo trộn mảng đáp án
-            const shuffledAnswers = [...currentQuestion.answers]; // Tạo một bản sao để không ảnh hưởng đến mảng gốc
-            shuffleArray(shuffledAnswers);
+            // Tạo mảng đáp án chỉ có 2 lựa chọn (1 đúng, 1 sai ngẫu nhiên)
+            const allAnswers = currentQuestion.answers;
+            const correctAnswer = currentQuestion.correct;
+            const wrongAnswers = allAnswers.filter(answer => answer !== correctAnswer);
+            const randomWrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+            
+            const displayAnswers = [correctAnswer, randomWrongAnswer];
+            shuffleArray(displayAnswers);
 
             answerButtonsElement.innerHTML = '';
-
-            // Lặp qua mảng đã được xáo trộn để hiển thị các nút
-            shuffledAnswers.forEach(answer => {
+            
+            displayAnswers.forEach(answer => {
                 const button = document.createElement('button');
                 button.textContent = answer;
                 button.classList.add('answer-btn');
-                button.addEventListener('click', () => selectAnswer(answer, currentQuestion.correct));
+                button.addEventListener('click', () => selectAnswer(answer, correctAnswer));
                 answerButtonsElement.appendChild(button);
             });
         }
@@ -235,13 +237,12 @@
             bestTimeElement.style.display = 'block';
         }
         // Hàm xáo trộn mảng (Fisher-Yates Shuffle)
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
     </script>
-
 </body>
 </html>
