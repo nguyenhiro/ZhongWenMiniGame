@@ -1,64 +1,57 @@
 const questions = [
     {
-        question: "这是什么?",
+        question: "Máy tính",
         answers: ["电脑 (diànnǎo)", "电话 (diànhuà)"],
         correct: "电脑 (diànnǎo)",
     },
     {
-        question: "这是什么?",
+        question: "Khăn giấy",
         answers: ["纸巾 (zhǐjīn)", "报纸 (bàozhǐ)"],
         correct: "纸巾 (zhǐjīn)",
     },
     {
-        question: "这是什么？",
-        answers: ["手表 (shǒubiǎo)", "手机 (shǒujī)", "手套 (shǒutào)", "手链 (shǒuliàn)"],
+        question: "Đồng hồ",
+        answers: ["手表 (shǒubiǎo)", "手机 (shǒujī)"],
         correct: "手表 (shǒubiǎo)",
-        image: "images/dongho.png" // Thêm trường image
     },
     {
-        question: "这是什么?",
-        answers: ["牙刷 (yáshuā)", "牙膏 (yágāo)", "毛巾 (máojīn)", "梳子 (shūzi)"],
+        question: "Bàn chải đánh răng",
+        answers: ["牙刷 (yáshuā)", "牙膏 (yágāo)"],
         correct: "牙刷 (yáshuā)",
-        image: "images/banchaidanhrang.png" // Thêm trường image
     },
     {
-        question: "这是什么?",
-        answers: ["手机 (shǒujī)", "手表 (shǒubiǎo)", "电话 (diànhuà)", "电脑 (diànnǎo)"],
+        question: "Điện thoại",
+        answers: ["手机 (shǒujī)", "手表 (shǒubiǎo)"],
         correct: "手机 (shǒujī)",
-        image: "images/dienthoai.png"
     },
     {
-        question: "这是什么?",
-        answers: ["柜子 (guìzi)", "箱子 (xiāngzi)", "盒子 (hézi)", "橱子 (chúzi)"],
+        question: "Cái tủ",
+        answers: ["柜子 (guìzi)", "箱子 (xiāngzi)"],
         correct: "柜子 (guìzi)",
-        image: "images/caitu.png"
     },
     {
-        question: "这是什么?",
-        answers: ["牙膏 (yágāo)", "牙刷 (yáshuā)", "香皂 (xiāngzào)", "洗发水 (xǐfàshuǐ)"],
+        question: "Kem đánh răng",
+        answers: ["牙膏 (yágāo)", "牙刷 (yáshuā)"],
         correct: "牙膏 (yágāo)",
-        image: "images/kemdanhrang.jpg"
     },
     {
-        question: "这是什么?",
-        answers: ["吹风机 (chuīfēngjī)", "洗衣机 (xǐyījī)", "空调 (kōngtiáo)", "电风扇 (diànfēngshàn)"],
+        question: "Máy sấy tóc",
+        answers: ["吹风机 (chuīfēngjī)", "洗衣机 (xǐyījī)"],
         correct: "吹风机 (chuīfēngjī)",
-        image: "images/maysaytoc.png"
     },
     {
-        question: "这是什么?",
-        answers: ["衣服 (yīfu)", "裤子 (kùzi)", "裙子 (qúnzi)", "外套 (wàitào)"],
+        question: "Quần áo",
+        answers: ["衣服 (yīfu)", "裤子 (kùzi)"],
         correct: "衣服 (yīfu)",
-        image: "images/quanao.png"
     },
     {
-        question: "这是什么?",
-        answers: ["桌子 (zhuōzi)", "椅子 (yǐzi)", "凳子 (dèngzi)", "床 (chuáng)"],
+        question: "Cái bàn",
+        answers: ["桌子 (zhuōzi)", "椅子 (yǐzi)"],
         correct: "桌子 (zhuōzi)",
-        image: "images/caiban.png"
     }
 
 ];
+
 
 
 
