@@ -1,15 +1,13 @@
 const questions = [
     {
         question: "这是什么?",
-        answers: ["电脑 (diànnǎo)", "电话 (diànhuà)", "电灯 (diàndēng)", "电影 (diànyǐng)"],
+        answers: ["电脑 (diànnǎo)", "电话 (diànhuà)"],
         correct: "电脑 (diànnǎo)",
-        image: "images/maytinh.png" // Thêm trường image với đường dẫn đến ảnh
     },
     {
         question: "这是什么?",
-        answers: ["纸巾 (zhǐjīn)", "报纸 (bàozhǐ)", "面巾 (miànjīn)", "毛巾 (máojīn)"],
+        answers: ["纸巾 (zhǐjīn)", "报纸 (bàozhǐ)"],
         correct: "纸巾 (zhǐjīn)",
-        image: "images/khangiay.jpg" // Thêm trường image
     },
     {
         question: "这是什么？",
@@ -61,5 +59,6 @@ const questions = [
     }
 
 ];
+
 
 
