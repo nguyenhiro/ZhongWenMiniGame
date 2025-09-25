@@ -49,7 +49,7 @@
         }
         .answers {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr; /* Sửa để hiển thị 2 nút dạng cột */
             gap: 10px;
         }
         .answer-btn {
@@ -156,7 +156,9 @@
                 if (bestTime === null || finalTime < bestTime) {
                     bestTime = finalTime;
                     localStorage.setItem('bestTime', bestTime);
-                    bestTimeElement.textContent = `Thời gian của lần chơi gần nhất: ${bestTime} giây.`;
+                    bestTimeElement.textContent = `Kỷ lục mới của bạn: ${bestTime} giây!`;
+                } else {
+                    bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây. Cố lên nhé!`;
                 }
                 bestTimeElement.style.display = 'block';
                 return;
@@ -229,6 +231,10 @@
 
         document.addEventListener('DOMContentLoaded', showQuestion);
         restartButton.addEventListener('click', restartGame);
+
+        if (bestTime) {
+            bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây.`;
+            bestTimeElement.style.display = 'block';
         }
         // Hàm xáo trộn mảng (Fisher-Yates Shuffle)
         function shuffleArray(array) {
@@ -240,5 +246,3 @@
     </script>
 </body>
 </html>
-
-
