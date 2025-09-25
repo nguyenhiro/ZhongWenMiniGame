@@ -156,9 +156,7 @@
                 if (bestTime === null || finalTime < bestTime) {
                     bestTime = finalTime;
                     localStorage.setItem('bestTime', bestTime);
-                    bestTimeElement.textContent = `Kỷ lục mới của bạn: ${bestTime} giây!`;
-                } else {
-                    bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây. Cố lên nhé!`;
+                    bestTimeElement.textContent = `Thời gian của lần chơi gần nhất: ${bestTime} giây.`;
                 }
                 bestTimeElement.style.display = 'block';
                 return;
@@ -246,3 +244,4 @@
     </script>
 </body>
 </html>
+
