@@ -156,9 +156,9 @@
                 if (bestTime === null || finalTime < bestTime) {
                     bestTime = finalTime;
                     localStorage.setItem('bestTime', bestTime);
-                    bestTimeElement.textContent = `Kỷ lục mới của bạn: ${bestTime} giây!`;
+                    bestTimeElement.textContent = `Thời gian của lần chơi mới nhất: ${finalTime} giây!`;
                 } else {
-                    bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây. Cố lên nhé!`;
+                    bestTimeElement.textContent = `Thời gian của lần chơi gần nhất: ${finalTime} giây. Cố lên nhé!`;
                 }
                 bestTimeElement.style.display = 'block';
                 return;
@@ -233,7 +233,7 @@
         restartButton.addEventListener('click', restartGame);
 
         if (bestTime) {
-            bestTimeElement.textContent = `Kỷ lục hiện tại: ${bestTime} giây.`;
+            bestTimeElement.textContent = `Thời gian của lần chơi gần nhất: ${finalTime} giây.`;
             bestTimeElement.style.display = 'block';
         }
         // Hàm xáo trộn mảng (Fisher-Yates Shuffle)
@@ -246,3 +246,4 @@
     </script>
 </body>
 </html>
+
