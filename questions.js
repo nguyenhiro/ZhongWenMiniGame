@@ -218,6 +218,322 @@ const questions = [
         question: "Đầu tư",
         answers: ["投资 (tóuzī)", "亏损 (kuīsǔn)"],
         correct: "投资 (tóuzī)",
+    },
+    {
+        question: "Bạn",
+        answers: ["你 (nǐ)", "我 (wǒ)"],
+        correct: "你 (nǐ)",
+    },
+    {
+        question: "Năm",
+        answers: ["一 (yī)", "五 (wǔ)"],
+        correct: "五 (wǔ)",
+    },
+    {
+        question: "Xin chào",
+        answers: ["好 (hǎo)", "你好 (nǐ hǎo)"],
+        correct: "你好 (nǐ hǎo)",
+    },
+    {
+        question: "Tám",
+        answers: ["八 (bā)", "三 (sān)"],
+        correct: "八 (bā)",
+    },
+    {
+        question: "Nhỏ",
+        answers: ["大 (dà)", "小 (xiǎo)"],
+        correct: "小 (xiǎo)",
+    },
+    {
+        question: "Không",
+        answers: ["不 (bù)", "有 (yǒu)"],
+        correct: "不 (bù)",
+    },
+    {
+        question: "Cái miệng",
+        answers: ["口 (kǒu)", "嘴 (zuǐ)"],
+        correct: "嘴 (zuǐ)",
+    },
+    {
+        question: "Đen",
+        answers: ["白 (bái)", "黑 (hēi)"],
+        correct: "黑 (hēi)",
+    },
+    {
+        question: "Nữ, con gái",
+        answers: ["女 (nǚ)", "马 (mǎ)"],
+        correct: "女 (nǚ)",
+    },
+    {
+        question: "Có thời gian rảnh",
+        answers: ["忙 (máng)", "有空 (yǒu kòng)"],
+        correct: "有空 (yǒu kòng)",
+    },
+    {
+        question: "Mẹ",
+        answers: ["吗 (ma)", "妈妈 (māma)"],
+        correct: "妈妈 (māma)",
+    },
+    {
+        question: "Khó",
+        answers: ["很 (hěn)", "难 (nán)"],
+        correct: "难 (nán)",
+    },
+    {
+        question: "Tiếng Trung",
+        answers: ["汉语 (Hànyǔ)", "中文 (Zhōngwén)"],
+        correct: "中文 (Zhōngwén)",
+    },
+    {
+        question: "To",
+        answers: ["太 (tài)", "大 (dà)"],
+        correct: "大 (dà)",
+    },
+    {
+        question: "Anh trai",
+        answers: ["爸爸 (bàba)", "哥哥 (gēge)"],
+        correct: "哥哥 (gēge)",
+    },
+    {
+        question: "Cô ấy",
+        answers: ["她 (tā)", "他 (tā)"],
+        correct: "她 (tā)",
+    },
+    {
+        question: "Nam, con trai",
+        answers: ["南 (nán)", "男 (nán)"],
+        correct: "男 (nán)",
+    },
+    {
+        question: "Em trai",
+        answers: ["弟弟 (dìdi)", "哥哥 (gēge)"],
+        correct: "弟弟 (dìdi)",
+    },
+    {
+        question: "Chị gái",
+        answers: ["姐姐 (jiějie)", "妹妹 (mèimei)"],
+        correct: "姐姐 (jiějie)",
+    },
+    {
+        question: "Tháng",
+        answers: ["越 (Yuè)", "月 (yuè)"],
+        correct: "月 (yuè)",
+    },
+    {
+        question: "Tuyết",
+        answers: ["学 (xué)", "雪 (xuě)"],
+        correct: "雪 (xuě)",
+    },
+    {
+        question: "Tiếng Anh",
+        answers: ["英语 (Yīngyǔ)", "德语 (Déyǔ)"],
+        correct: "英语 (Yīngyǔ)",
+    },
+    {
+        question: "Tiếng Pháp",
+        answers: ["阿拉伯语 (Ālābóyǔ)", "法语 (Fǎyǔ)"],
+        correct: "法语 (Fǎyǔ)",
+    },
+    {
+        question: "Tiếng Nga",
+        answers: ["俄语 (Éyǔ)", "韩国语 (Hánguóyǔ)"],
+        correct: "俄语 (Éyǔ)",
+    },
+    {
+        question: "Tiếng Tây Ban Nha",
+        answers: ["日语 (Rìyǔ)", "西班牙语 (Xībānyáyǔ)"],
+        correct: "西班牙语 (Xībānyáyǔ)",
+    },
+    {
+        question: "Sai",
+        answers: ["对 (duì)", "错 (cuò)"],
+        correct: "错 (cuò)",
+    },
+    {
+        question: "Hôm qua",
+        answers: ["明天 (míngtiān)", "昨天 (zuótiān)"],
+        correct: "昨天 (zuótiān)",
+    },
+    {
+        question: "Gặp, diện kiến",
+        answers: ["见 (jiàn)", "去 (qù)"],
+        correct: "见 (jiàn)",
+    },
+    {
+        question: "Bưu điện",
+        answers: ["邮局 (yóujú)", "寄 (jì)"],
+        correct: "邮局 (yóujú)",
+    },
+    {
+        question: "Bưu kiện",
+        answers: ["包裹 (bāoguǒ)", "信 (xìn)"],
+        correct: "包裹 (bāoguǒ)",
+    },
+    {
+        question: "Tâm, tim, tấm lòng",
+        answers: ["新 (xīn)", "心 (xīn)"],
+        correct: "心 (xīn)",
+    },
+    {
+        question: "Ngân hàng",
+        answers: ["银行 (yínháng)", "取 (qǔ)"],
+        correct: "银行 (yínháng)",
+    },
+    {
+        question: "Tiền",
+        answers: ["钱 (qián)", "七 (qī)"],
+        correct: "钱 (qián)",
+    },
+    {
+        question: "Chín",
+        answers: ["六 (liù)", "九 (jiǔ)"],
+        correct: "九 (jiǔ)",
+    },
+    {
+        question: "Tên riêng",
+        answers: ["北京 (Běijīng)", "专名 (zhuānmíng)"],
+        correct: "专名 (zhuānmíng)",
+    },
+    {
+        question: "Ngày, trời",
+        answers: ["今天 (jīntiān)", "天 (tiān)"],
+        correct: "天 (tiān)",
+    },
+    {
+        question: "Ngày kia",
+        answers: ["后天 (hòutiān)", "大后天 (dàhòutiān)"],
+        correct: "大后天 (dàhòutiān)",
+    },
+    {
+        question: "Tuần, thứ",
+        answers: ["星期 (xīngqī)", "周末 (zhōumò)"],
+        correct: "星期 (xīngqī)",
+    },
+    {
+        question: "Thứ 6",
+        answers: ["星期一 (xīngqī yī)", "星期五 (xīngqī wǔ)"],
+        correct: "星期五 (xīngqī wǔ)",
+    },
+    {
+        question: "Thứ 3",
+        answers: ["星期二 (xīngqī èr)", "星期三 (xīngqī sān)"],
+        correct: "星期二 (xīngqī èr)",
+    },
+    {
+        question: "Thứ 7",
+        answers: ["星期四 (xīngqī sì)", "星期六 (xīngqī liù)"],
+        correct: "星期六 (xīngqī liù)",
+    },
+    {
+        question: "Chủ nhật",
+        answers: ["星期天 (xīngqī tiān)", "周末 (zhōumò)"],
+        correct: "星期天 (xīngqī tiān)",
+    },
+    {
+        question: "Cuối tuần",
+        answers: ["周末 (zhōumò)", "星期日 (xīngqī rì)"],
+        correct: "周末 (zhōumò)",
+    },
+    {
+        question: "Hai",
+        answers: ["几 (jǐ)", "二 (èr)"],
+        correct: "二 (èr)",
+    },
+    {
+        question: "Bốn",
+        answers: ["三 (sān)", "四 (sì)"],
+        correct: "四 (sì)",
+    },
+    {
+        question: "Ở đâu",
+        answers: ["哪儿 (nǎr)", "那儿 (nàr)"],
+        correct: "哪儿 (nǎr)",
+    },
+    {
+        question: "Biết, sẽ, có thể",
+        answers: ["会 (huì)", "回 (huí)"],
+        correct: "会 (huì)",
+    },
+    {
+        question: "Lớp học, phòng học",
+        answers: ["学校 (xuéxiào)", "教室 (jiàoshì)"],
+        correct: "教室 (jiàoshì)",
+    },
+    {
+        question: "Lại đến, làm lại lần nữa",
+        answers: ["再见 (zàijiàn)", "再来 (zài lái)"],
+        correct: "再来 (zài lái)",
+    },
+    {
+        question: "Xin lỗi",
+        answers: ["对不起 (duìbuqǐ)", "不客气 (bú kèqi)"],
+        correct: "对不起 (duìbuqǐ)",
+    },
+    {
+        question: "Không sao",
+        answers: ["没关系 (méiguānxi)", "不客气 (bú kèqi)"],
+        correct: "没关系 (méiguānxi)",
+    },
+    {
+        question: "Thiên An",
+        answers: ["天安门 (Tiān’ānmén)", "天安 (Tiān’ān)"],
+        correct: "天安 (Tiān’ān)",
+    },
+    {
+        question: "Đây, này",
+        answers: ["这 (zhè)", "是 (shì)"],
+        correct: "这 (zhè)",
+    },
+    {
+        question: "Thầy giáo, cô giáo",
+        answers: ["老师 (lǎoshī)", "您 (nín)"],
+        correct: "老师 (lǎoshī)",
+    },
+    {
+        question: "Mời, xin",
+        answers: ["请 (qǐng)", "进 (jìn)"],
+        correct: "请 (qǐng)",
+    },
+    {
+        question: "Ngồi",
+        answers: ["做 (zuò)", "坐 (zuò)"],
+        correct: "坐 (zuò)",
+    },
+    {
+        question: "Uống",
+        answers: ["和 (hé)", "喝 (hē)"],
+        correct: "喝 (hē)",
+    },
+    {
+        question: "Trà",
+        answers: ["茶 (chá)", "谢谢 (xièxie)"],
+        correct: "茶 (chá)",
+    },
+    {
+        question: "Cảm tạ, cảm ơn, biết ơn",
+        answers: ["感谢 (gǎnxiè)", "客气 (kèqi)"],
+        correct: "感谢 (gǎnxiè)",
+    },
+    {
+        question: "Thân thể, sức khoẻ",
+        answers: ["多谢 (duōxiè)", "身体 (shēntǐ)"],
+        correct: "身体 (shēntǐ)",
+    },
+    {
+        question: "Việc, sự việc",
+        answers: ["十 (shí)", "事 (shì)"],
+        correct: "事 (shì)",
+    },
+    {
+        question: "Vương",
+        answers: ["日 (rì)", "王 (Wáng)"],
+        correct: "王 (Wáng)",
+    },
+    {
+        question: "Giáo sư",
+        answers: ["教授 (jiàoshòu)", "校长 (xiàozhǎng)"],
+        correct: "教授 (jiàoshòu)",
     }
 ];
+
 
