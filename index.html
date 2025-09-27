@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Đố Vui</title>
     <style>
-        /* Giữ nguyên phần CSS đã có */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -88,8 +87,6 @@
             font-size: 1.1em;
             color: #2c3e50;
         }
-
-        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -129,6 +126,17 @@
         #nextLevel {
             background-color: #2ecc71;
         }
+        .level-stats {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #555;
+            text-align: left;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .level-stats p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -159,9 +167,10 @@
         const maxLevel = 2; // Bạn có thể thay đổi số level tại đây
         let currentQuestionIndex = 0;
         let score = 0;
-        let totalTime = 0;
+        let levelTime = 0; // Thời gian cho level hiện tại
         let timerId;
         let currentQuestions;
+        let allLevelsStats = {}; // Đối tượng lưu trữ kết quả các level đã hoàn thành
 
         // DOM Elements
         const questionElement = document.getElementById('question');
@@ -174,8 +183,8 @@
 
         // Timer Functions
         function updateTimer() {
-            totalTime++;
-            timerElement.textContent = `${totalTime}s`;
+            levelTime++;
+            timerElement.textContent = `${levelTime}s`;
         }
 
         function startTimer() {
@@ -184,38 +193,33 @@
 
         function resetTimer() {
             clearInterval(timerId);
-            totalTime = 0;
+            levelTime = 0;
             timerElement.textContent = "0s";
         }
 
         // Game Logic
-        function startLevel(level, continueProgress = false) {
+        function startLevel(level) {
             currentLevel = level;
             currentQuestions = questionsByLevel[currentLevel];
             currentQuestionIndex = 0;
-            score = continueProgress ? score : 0;
-            if (!continueProgress) {
-                resetTimer();
-            }
+            score = 0; // Điểm sẽ được tính lại cho mỗi level
+            resetTimer(); // Reset thời gian cho mỗi level
             startTimer();
             showQuestion();
             resultModal.style.display = 'none';
         }
 
         function showQuestion() {
-            // Kiểm tra nếu đã hết câu hỏi của level hiện tại
             if (currentQuestionIndex >= currentQuestions.length) {
                 endLevel();
                 return;
             }
 
             const currentQuestion = currentQuestions[currentQuestionIndex];
-
-            // Cập nhật giao diện
-            questionCounterElement.textContent = `Câu hỏi: ${currentQuestionIndex + 1}/${currentQuestions.length}`;
+            
+            questionCounterElement.textContent = `Câu hỏi: ${currentQuestionIndex + 1}/${currentQuestions.length} (Level ${currentLevel})`;
             questionElement.textContent = currentQuestion.question;
 
-            // Xử lý hiển thị hình ảnh
             if (currentQuestion.image) {
                 questionImageElement.src = currentQuestion.image;
                 questionImageElement.style.display = 'block';
@@ -224,12 +228,11 @@
                 questionImageElement.src = '';
             }
 
-            // Chuẩn bị và hiển thị đáp án
             const allAnswers = currentQuestion.answers;
             const correctAnswer = currentQuestion.correct;
             const wrongAnswers = allAnswers.filter(answer => answer !== correctAnswer);
             const randomWrongAnswer = wrongAnswers.length > 0 ? wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)] : null;
-
+            
             let displayAnswers = [correctAnswer];
             if (randomWrongAnswer) {
                 displayAnswers.push(randomWrongAnswer);
@@ -264,8 +267,8 @@
                     currentQuestionIndex++;
                     score++;
                 } else {
-                    alert("Đáp án sai! Bắt đầu lại Level 1.");
-                    startLevel(1, false); // Trở về Level 1 và reset game
+                    alert(`Đáp án sai! Bắt đầu lại Level ${currentLevel}.`);
+                    startLevel(currentLevel); // Chỉ chơi lại level hiện tại
                     return;
                 }
                 showQuestion();
@@ -275,12 +278,31 @@
         function endLevel() {
             clearInterval(timerId);
 
+            // Lưu kết quả của level hiện tại vào biến allLevelsStats
+            allLevelsStats[currentLevel] = {
+                time: levelTime,
+                score: score
+            };
+
+            // Lưu vào localStorage
+            localStorage.setItem('gameStats', JSON.stringify(allLevelsStats));
+
             let modalContentHtml = `
                 <h2>Chúc mừng bạn đã hoàn thành Level ${currentLevel}!</h2>
-                <p>Tổng điểm: ${score}</p>
-                <p>Tổng thời gian: ${totalTime} giây</p>
+                <p>Điểm: ${score}/${currentQuestions.length}</p>
+                <p>Thời gian hoàn thành level: ${levelTime} giây</p>
                 <button id="replayLevel">Chơi lại Level ${currentLevel}</button>
             `;
+            
+            // Hiển thị thành tích các level đã hoàn thành
+            let statsHtml = '<div class="level-stats"><h3>Thành tích đã đạt</h3>';
+            for (let i = 1; i <= currentLevel; i++) {
+                if (allLevelsStats[i]) {
+                    statsHtml += `<p>Level ${i}: Hoàn thành trong **${allLevelsStats[i].time}s** với ${allLevelsStats[i].score}/${questionsByLevel[i].length} điểm</p>`;
+                }
+            }
+            statsHtml += '</div>';
+            modalContentHtml += statsHtml;
 
             if (currentLevel < maxLevel) {
                 modalContentHtml += `<button id="nextLevel">Tiếp tục Level ${currentLevel + 1}</button>`;
@@ -292,17 +314,17 @@
             resultModal.style.display = 'flex';
 
             document.getElementById("replayLevel").onclick = () => {
-                startLevel(currentLevel, false);
+                startLevel(currentLevel);
             };
 
             if (currentLevel < maxLevel) {
                 document.getElementById("nextLevel").onclick = () => {
-                    startLevel(currentLevel + 1, true);
+                    startLevel(currentLevel + 1);
                 };
             }
         }
-
-        // Hàm xáo trộn mảng (Fisher-Yates Shuffle)
+        
+        // Helper function
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -311,9 +333,14 @@
         }
 
         // Bắt đầu game khi trang được tải
-        document.addEventListener('DOMContentLoaded', () => startLevel(1));
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy dữ liệu từ localStorage khi trang được tải
+            const storedStats = localStorage.getItem('gameStats');
+            if (storedStats) {
+                allLevelsStats = JSON.parse(storedStats);
+            }
+            startLevel(1);
+        });
     </script>
 </body>
 </html>
-
-
