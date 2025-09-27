@@ -1,4 +1,5 @@
-const questions = [
+const questionsByLevel = {
+    1: [
     {
         question: "Máy tính",
         answers: ["电脑 (diànnǎo)", "电话 (diànhuà)"],
@@ -1183,8 +1184,14 @@ const questions = [
         question: "Ngoại thương (danh từ)",
         answers: ["外贸 (wàimào)", "多 (duō)"],
         correct: "外贸 (wàimào)",
+    },
+],
+2: [
+    {
+        question: "22222222",
+        answers: ["外贸 (wàimào)", "多 (duō)"],
+        correct: "外贸 (wàimào)",
     }
 ];
-
 
 
