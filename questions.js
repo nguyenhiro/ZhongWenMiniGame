@@ -167,8 +167,8 @@ const questionsByLevel = {
     },
             {
         question: "Sổ tay, máy tính xách tay (laptop)",
-        answers: ["笔记本 (bǐjìběn)", "圆珠笔 (yuánzhūbǐ)"],
-        correct: "笔记本 (bǐjìběn)",
+        answers: ["笔记本 (bǐjìběn)电脑(diànnǎo)", "圆珠笔 (yuánzhūbǐ)"],
+        correct: "笔记本 (bǐjìběn)电脑(diànnǎo)",
     },
             {
         question: "Báo cáo tuần",
@@ -1117,7 +1117,7 @@ const questionsByLevel = {
     },
     {
         question: "Ly, cốc",
-        answers: ["杯 (bēi)", "车 (chē"],
+        answers: ["杯 (bēi)", "车 (chē)"],
         correct: "杯 (bēi)",
     },
     {
@@ -1194,5 +1194,6 @@ const questionsByLevel = {
     }
 ]
 };
+
 
 
