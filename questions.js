@@ -1192,6 +1192,7 @@ const questionsByLevel = {
         answers: ["外贸 (wàimào)", "多 (duō)"],
         correct: "外贸 (wàimào)",
     }
-];
+]
+};
 
 
