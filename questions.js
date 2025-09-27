@@ -533,7 +533,658 @@ const questions = [
         question: "Giáo sư",
         answers: ["教授 (jiàoshòu)", "校长 (xiàozhǎng)"],
         correct: "教授 (jiàoshòu)",
+    },
+    {
+        question: "Xin hỏi",
+        answers: ["请问 (qǐng wèn)", "问 (wèn)"],
+        correct: "请问 (qǐng wèn)",
+    },
+    {
+        question: "Họ",
+        answers: ["贵姓 (guìxìng)", "姓 (xìng)"],
+        correct: "姓 (xìng)",
+    },
+    {
+        question: "Gọi",
+        answers: ["叫 (jiào)", "名字 (míngzi)"],
+        correct: "叫 (jiào)",
+    },
+    {
+        question: "Nước, quốc gia",
+        answers: ["哪 (nǎ)", "国 (guó)"],
+        correct: "国 (guó)",
+    },
+    {
+        question: "Nước Đức",
+        answers: ["中国 (Zhōngguó)", "德国 (Déguó)"],
+        correct: "德国 (Déguó)",
+    },
+    {
+        question: "Nước Pháp",
+        answers: ["俄国 (Éguó)", "法国 (Fǎguó)"],
+        correct: "法国 (Fǎguó)",
+    },
+    {
+        question: "Giáo sư",
+        answers: ["教授 (jiàoshòu)", "校长 (xiàozhǎng)"],
+        correct: "教授 (jiàoshòu)",
+    },
+    {
+        question: "Hàn Quốc",
+        answers: ["韩国 (Hánguó)", "日本 (Rìběn)"],
+        correct: "韩国 (Hánguó)",
+    },
+    {
+        question: "Nhật Bản",
+        answers: ["日本 (Rìběn)", "英国 (Yīngguó)"],
+        correct: "日本 (Rìběn)",
+    },
+    {
+        question: "Nó",
+        answers: ["人 (rén)", "它 (tā)"],
+        correct: "它 (tā)",
+    },
+    {
+        question: "Chữ Hán",
+        answers: ["学习 (xuéxí)", "汉字 (Hànzì)"],
+        correct: "汉字 (Hànzì)",
+    },
+    {
+        question: "Cái gì, gì",
+        answers: ["什么 (shénme)", "书 (shū)"],
+        correct: "什么 (shénme)",
+    },
+    {
+        question: "Phát âm",
+        answers: ["发音 (fāyīn)", "什么 (shénme)"],
+        correct: "发音 (fāyīn)",
+    },
+    {
+        question: "Ai",
+        answers: ["谁 (shéi / shuí)", "的 (de)"],
+        correct: "谁 (shéi / shuí)",
+    },
+    {
+        question: "Tạp chí",
+        answers: ["那 (nà)", "杂志 (zázhì)"],
+        correct: "杂志 (zázhì)",
+    },
+    {
+        question: "Giáo sư",
+        answers: ["教授 (jiàoshòu)", "校长 (xiàozhǎng)"],
+        correct: "教授 (jiàoshòu)",
+    },
+    {
+        question: "Tiếng Trung",
+        answers: ["文 (wén)", "中文 (Zhōngwén)"],
+        correct: "中文 (Zhōngwén)",
+    },
+    {
+        question: "Tiếng Ả Rập",
+        answers: ["阿拉伯文 (Ālābó wén)", "德文 (Dé wén)"],
+        correct: "阿拉伯文 (Ālābó wén)",
+    },
+    {
+        question: "Tiếng Nga",
+        answers: ["俄文 (É wén)", "法文 (Fǎ wén)"],
+        correct: "俄文 (É wén)",
+    },
+    {
+        question: "Tiếng Nhật",
+        answers: ["韩文 (Hán wén)", "日文 (Rì wén)"],
+        correct: "日文 (Rì wén)",
+    },
+    {
+        question: "Tiếng Tây Ban Nha",
+        answers: ["西班牙文 (Xībānyá wén)", "英文 (Yīng wén)"],
+        correct: "西班牙文 (Xībānyá wén)",
+    },
+    {
+        question: "Mike",
+        answers: ["朋友 (péngyǒu)", "麦克 (Màikè)"],
+        correct: "麦克 (Màikè)",
+    },
+    {
+        question: "Trương Đông",
+        answers: ["张东 (Zhāng Dōng)", "麦克 (Màikè)"],
+        correct: "张东 (Zhāng Dōng)",
+    },
+    {
+        question: "Giáo sư",
+        answers: ["教授 (jiàoshòu)", "校长 (xiàozhǎng)"],
+        correct: "教授 (jiàoshòu)",
+    },
+    {
+        question: "Buổi trưa",
+        answers: ["中午 (zhōngwǔ)", "吃 (chī)"],
+        correct: "中午 (zhōngwǔ)",
+    },
+    {
+        question: "Ăn",
+        answers: ["吃 (chī)", "饭 (fàn)"],
+        correct: "吃 (chī)",
+    },
+    {
+        question: "Nhà ăn, căn tin",
+        answers: ["食堂 (shítáng)", "馒头 (mántou)"],
+        correct: "食堂 (shítáng)",
+    },
+    {
+        question: "Bánh bao chay",
+        answers: ["馒头 (mántou)", "米饭 (mǐfàn)"],
+        correct: "馒头 (mántou)",
+    },
+    {
+        question: "Gạo",
+        answers: ["米 (mǐ)", "米饭 (mǐfàn)"],
+        correct: "米 (mǐ)",
+    },
+    {
+        question: "Cần, muốn",
+        answers: ["要 (yào)", "个 (gè)"],
+        correct: "要 (yào)",
+    },
+    {
+        question: "Bát",
+        answers: ["碗 (wǎn)", "鸡蛋 (jīdàn)"],
+        correct: "碗 (wǎn)",
+    },
+    {
+        question: "Trứng gà",
+        answers: ["鸡蛋 (jīdàn)", "鸡 (jī)"],
+        correct: "鸡蛋 (jīdàn)",
+    },
+    {
+        question: "Canh, súp",
+        answers: ["蛋 (dàn)", "汤 (tāng)"],
+        correct: "汤 (tāng)",
+    },
+    {
+        question: "Những cái này",
+        answers: ["这些 (zhèxiē)", "一些 (yìxiē)"],
+        correct: "这些 (zhèxiē)",
+    },
+    {
+        question: "Những cái kia",
+        answers: ["那些 (nàxiē)", "些 (xiē)"],
+        correct: "那些 (nàxiē)",
+    },
+    {
+        question: "Há cảo",
+        answers: ["饺子 (jiǎozi)", "包子 (bāozi)"],
+        correct: "饺子 (jiǎozi)",
+    },
+    {
+        question: "Mì, bún, sợi mì",
+        answers: ["面条 (miàntiáo)", "玛丽 (Mǎlì)"],
+        correct: "面条 (miàntiáo)",
+    },
+    {
+        question: "Bán",
+        answers: ["买 (mǎi)", "卖 (mài)"],
+        correct: "卖 (mài)",
+    },
+    {
+        question: "Kilogram",
+        answers: ["斤 (jīn)", "公斤 (gōngjīn)"],
+        correct: "公斤 (gōngjīn)",
+    },
+    {
+        question: "Táo",
+        answers: ["水果 (shuǐguǒ)", "苹果 (píngguǒ)"],
+        correct: "苹果 (píngguǒ)",
+    },
+    {
+        question: "Đắt, quý",
+        answers: ["贵 (guì)", "了 (le)"],
+        correct: "贵 (guì)",
+    },
+    {
+        question: "Bao nhiêu",
+        answers: ["吧 (ba)", "多少 (duōshǎo)"],
+        correct: "多少 (duōshǎo)",
+    },
+    {
+        question: "Nhiều, hơn",
+        answers: ["多 (duō)", "少 (shǎo)"],
+        correct: "多 (duō)",
+    },
+    {
+        question: "Đồng, tệ",
+        answers: ["块 (kuài)", "角 (jiǎo)"],
+        correct: "块 (kuài)",
+    },
+    {
+        question: "Hào",
+        answers: ["毛 (máo)", "元 (yuán)"],
+        correct: "毛 (máo)",
+    },
+    {
+        question: "Xu",
+        answers: ["分 (fēn)", "块 (kuài)"],
+        correct: "分 (fēn)",
+    },
+    {
+        question: "Vẫn, trả lại",
+        answers: ["还 (hái / huán)", "别的 (bié de)"],
+        correct: "还 (hái / huán)",
+    },
+    {
+        question: "Khác",
+        answers: ["别的 (bié de)", "橘子 (júzi)"],
+        correct: "别的 (bié de)",
+    },
+    {
+        question: "Quýt",
+        answers: ["橘子 (júzi)", "怎么 (zěnme)"],
+        correct: "橘子 (júzi)",
+    },
+    {
+        question: "Tổng cộng",
+        answers: ["一共 (yígòng)", "两 (liǎng)"],
+        correct: "一共 (yígòng)",
+    },
+    {
+        question: "Đưa, cho",
+        answers: ["给 (gěi)", "找 (zhǎo)"],
+        correct: "给 (gěi)",
+    },
+    {
+        question: "Buổi chiều",
+        answers: ["下午 (xiàwǔ)", "上午 (shàngwǔ)"],
+        correct: "下午 (xiàwǔ)",
+    },
+    {
+        question: "Thư viện",
+        answers: ["图书馆 (túshūguǎn)", "营业员 (yíngyèyuán)"],
+        correct: "图书馆 (túshūguǎn)",
+    },
+    {
+        question: "Đổi, trao đổi",
+        answers: ["换 (huàn)", "小姐 (xiǎojiě)"],
+        correct: "换 (huàn)",
+    },
+    {
+        question: "Nhân dân tệ",
+        answers: ["人民币 (Rénmínbì)", "人民 (rénmín)"],
+        correct: "人民币 (Rénmínbì)",
+    },
+    {
+        question: "Nghìn",
+        answers: ["百 (bǎi)", "千 (qiān)"],
+        correct: "千 (qiān)",
+    },
+    {
+        question: "Vạn",
+        answers: ["万 (wàn)", "百 (bǎi)"],
+        correct: "万 (wàn)",
+    },
+    {
+        question: "Đô la mỹ, USD",
+        answers: ["美元 (Měiyuán)", "港币 (Gǎngbì)"],
+        correct: "美元 (Měiyuán)",
+    },
+    {
+        question: "EURO",
+        answers: ["日元 (Rìyuán)", "欧元 (Ōuyuán)"],
+        correct: "欧元 (Ōuyuán)",
+    },
+    {
+        question: "Chờ, đợi/ vv...",
+        answers: ["等 (děng)", "一会儿 (yíhuìr)"],
+        correct: "等 (děng)",
+    },
+    {
+        question: "Tiên shinh",
+        answers: ["先生 (xiānsheng)", "数 (shù / shǔ)"],
+        correct: "先生 (xiānsheng)",
+    },
+    {
+        question: "Làm việc văn phòng",
+        answers: ["办公室 (bàngōngshì)", "办公 (bàngōng)"],
+        correct: "办公 (bàngōng)",
+    },
+    {
+        question: "Nhân viên",
+        answers: ["职员 (zhíyuán)", "找 (zhǎo)"],
+        correct: "职员 (zhíyuán)",
+    },
+    {
+        question: "Tìm, trả lại tiền thừa",
+        answers: ["找 (zhǎo)", "在 (zài)"],
+        correct: "找 (zhǎo)",
+    },
+    {
+        question: "Nhà, gia đình",
+        answers: ["家 (jiā)", "呢 (ne)"],
+        correct: "家 (jiā)",
+    },
+    {
+        question: "Ở, cư trú",
+        answers: ["住 (zhù)", "楼 (lóu)"],
+        correct: "住 (zhù)",
+    },
+    {
+        question: "Căn phòng",
+        answers: ["门 (mén)", "房间 (fángjiān)"],
+        correct: "房间 (fángjiān)",
+    },
+    {
+        question: "Biết",
+        answers: ["号 (hào)", "知道 (zhīdào)"],
+        correct: "知道 (zhīdào)",
+    },
+    {
+        question: "Điện thoại bàn",
+        answers: ["电话 (diànhuà)", "电 (diàn)"],
+        correct: "电话 (diànhuà)",
+    },
+    {
+        question: "Mã số",
+        answers: ["话 (huà)", "号码 (hàomǎ)"],
+        correct: "号码 (hàomǎ)",
+    },
+    {
+        question: "Số 0, lẻ",
+        answers: ["零 (líng)", "手 (shǒu)"],
+        correct: "零 (líng)",
+    },
+    {
+        question: "Lý Sáng Hạo",
+        answers: ["李昌浩 (Lǐ Chānghào)", "秘书 (mìshū)"],
+        correct: "李昌浩 (Lǐ Chānghào)",
+    },
+    {
+        question: "Giới thiệu",
+        answers: ["先 (xiān)", "介绍 (jièshào)"],
+        correct: "介绍 (jièshào)",
+    },
+    {
+        question: "Vị",
+        answers: ["一下儿 (yíxiàr)", "位 (wèi)"],
+        correct: "位 (wèi)",
+    },
+    {
+        question: "Hoan nghênh, chào mừng",
+        answers: ["欢迎 (huānyíng)", "留学生 (liúxuéshēng)"],
+        correct: "欢迎 (huānyíng)",
+    },
+    {
+        question: "Cũng",
+        answers: ["留学 (liúxué)", "也 (yě)"],
+        correct: "也 (yě)",
+    },
+    {
+        question: "Chúng tôi",
+        answers: ["我们 (wǒmen)", "你们 (nǐmen)"],
+        correct: "我们 (wǒmen)",
+    },
+    {
+        question: "Họ, bọn họ (nữ)",
+        answers: ["他们 (tāmen)", "她们 (tāmen)"],
+        correct: "她们 (tāmen)",
+    },
+    {
+        question: "Lượng từ 2 người",
+        answers: ["都 (dōu)", "俩 (liǎ)"],
+        correct: "俩 (liǎ)",
+    },
+    {
+        question: "Không có gì",
+        answers: ["学生 (xuésheng)", "没什么 (méi shénme)"],
+        correct: "没什么 (méi shénme)",
+    },
+    {
+        question: "Điền Phương",
+        answers: ["马 (mǎ)", "田芳 (Tián Fāng)"],
+        correct: "田芳 (Tián Fāng)",
+    },
+    {
+        question: "Ái Đức Hoa, Edward",
+        answers: ["爱德华 (Àidéhuá)", "罗兰 (Luólán)"],
+        correct: "爱德华 (Àidéhuá)",
+    },
+    {
+        question: "Ngôn ngữ",
+        answers: ["语言 (yǔyán)", "大学 (dàxué)"],
+        correct: "语言 (yǔyán)",
+    },
+    {
+        question: "Thế nào, ra sao, như thế nào",
+        answers: ["怎么样 (zěnmeyàng)", "觉得 (juéde)"],
+        correct: "怎么样 (zěnmeyàng)",
+    },
+    {
+        question: "Cảm thấy",
+        answers: ["觉得 (juéde)", "语法 (yǔfǎ)"],
+        correct: "觉得 (juéde)",
+    },
+    {
+        question: "Nghe",
+        answers: ["听 (tīng)", "和 (hé)"],
+        correct: "听 (tīng)",
+    },
+    {
+        question: "Nói",
+        answers: ["说 (shuō)", "比较 (bǐjiào)"],
+        correct: "说 (shuō)",
+    },
+    {
+        question: "Tương đối",
+        answers: ["比较 (bǐjiào)", "容易 (róngyì)"],
+        correct: "比较 (bǐjiào)",
+    },
+    {
+        question: "Dễ",
+        answers: ["容易 (róngyì)", "读 (dú)"],
+        correct: "容易 (róngyì)",
+    },
+    {
+        question: "Đọc",
+        answers: ["读 (dú)", "写 (xiě)"],
+        correct: "读 (dú)",
+    },
+    {
+        question: "Nhưng",
+        answers: ["但是 (dànshì)", "给 (gěi)"],
+        correct: "但是 (dànshì)",
+    },
+    {
+        question: "Mới",
+        answers: ["新 (xīn)", "北京语言大学 (Běijīng Yǔyán Dàxué)"],
+        correct: "新 (xīn)",
+    },
+    {
+        question: "Bạn cùng phòng",
+        answers: ["同学 (tóngxué)", "同屋 (tóngwū)"],
+        correct: "同屋 (tóngwū)",
+    },
+    {
+        question: "Lâm",
+        answers: ["班 (bān)", "林 (Lín)"],
+        correct: "林 (Lín)",
+    },
+    {
+        question: "Vali, thùng, hộp",
+        answers: ["没有 (méiyǒu)", "箱子 (xiāngzi)"],
+        correct: "箱子 (xiāngzi)",
+    },
+    {
+        question: "Ở đây",
+        answers: ["有 (yǒu)", "这儿 (zhèr)"],
+        correct: "这儿 (zhèr)",
+    },
+    {
+        question: "Lâu, lâu rồi",
+        answers: ["好久 (hǎojiǔ)", "经理 (jīnglǐ)"],
+        correct: "好久 (hǎojiǔ)",
+    },
+    {
+        question: "Nặng",
+        answers: ["重 (zhòng)", "黑 (hēi)"],
+        correct: "重 (zhòng)",
+    },
+    {
+        question: "Màu đỏ",
+        answers: ["红 (hóng)", "轻 (qīng)"],
+        correct: "红 (hóng)",
+    },
+    {
+        question: "Nhẹ",
+        answers: ["轻 (qīng)", "旧 (jiù)"],
+        correct: "轻 (qīng)",
+    },
+    {
+        question: "Cũ",
+        answers: ["旧 (jiù)", "药 (yào)"],
+        correct: "旧 (jiù)",
+    },
+    {
+        question: "Thuốc",
+        answers: ["药 (yào)", "中药 (zhōngyào)"],
+        correct: "药 (yào)",
+    },
+    {
+        question: "Thuốc tây",
+        answers: ["中药 (zhōngyào)", "西药 (xīyào)"],
+        correct: "西药 (xīyào)",
+    },
+    {
+        question: "Lá trà",
+        answers: ["茶叶 (cháyè)", "里 (lǐ)"],
+        correct: "茶叶 (cháyè)",
+    },
+    {
+        question: "Đồ dùng hằng ngày",
+        answers: ["日用品 (rìyòngpǐn)", "件 (jiàn)"],
+        correct: "日用品 (rìyòngpǐn)",
+    },
+    {
+        question: "Mưa",
+        answers: ["雨 (yǔ)", "把 (bǎ)"],
+        correct: "雨 (yǔ)",
+    },
+    {
+        question: "Ô, dù",
+        answers: ["衣服 (yīfu)", "雨伞 (yǔsǎn)"],
+        correct: "雨伞 (yǔsǎn)",
+    },
+    {
+        question: "Nước hoa",
+        answers: ["瓶 (píng)", "香水 (xiāngshuǐ)"],
+        correct: "香水 (xiāngshuǐ)",
+    },
+    {
+        question: "Nước",
+        answers: ["水 (shuǐ)", "本 (běn)"],
+        correct: "水 (shuǐ)",
+    },
+    {
+        question: "Đĩa CD/DVD",
+        answers: ["光盘 (guāngpán)", "支 (zhī)"],
+        correct: "光盘 (guāngpán)",
+    },
+    {
+        question: "Từ điển",
+        answers: ["词典 (cídiǎn)", "张 (zhāng)"],
+        correct: "词典 (cídiǎn)",
+    },
+    {
+        question: "Tạm tạm, bình thường",
+        answers: ["马马虎虎 (mǎmǎhūhū)", "最近 (zuìjìn)"],
+        correct: "马马虎虎 (mǎmǎhūhū)",
+    },
+    {
+        question: "Gần đây",
+        answers: ["最近 (zuìjìn)", "刚 (gāng)"],
+        correct: "最近 (zuìjìn)",
+    },
+    {
+        question: "Mở, lái, tổ chức",
+        answers: ["开学 (kāixué)", "开 (kāi)"],
+        correct: "开 (kāi)",
+    },
+    {
+        question: "Hơi, có chút",
+        answers: ["有点儿 (yǒudiǎnr)", "还是 (háishì)"],
+        correct: "有点儿 (yǒudiǎnr)",
+    },
+    {
+        question: "Cà phê",
+        answers: ["咖啡 (kāfēi)", "点儿 (diǎnr)"],
+        correct: "咖啡 (kāfēi)",
+    },
+    {
+        question: "Ly, cốc",
+        answers: ["杯 (bēi)", "车 (chē"],
+        correct: "杯 (bēi)",
+    },
+    {
+        question: "Xe đạp",
+        answers: ["自行车 (zìxíngchē)", "汽车 (qìchē)"],
+        correct: "自行车 (zìxíngchē)",
+    },
+    {
+        question: "Xe máy, mô tô",
+        answers: ["摩托车 (mótuōchē)", "出租车 (chūzūchē)"],
+        correct: "摩托车 (mótuōchē)",
+    },
+    {
+        question: "Taxi",
+        answers: ["出租车 (chūzūchē)", "公共汽车 (gōnggòng qìchē)"],
+        correct: "出租车 (chūzūchē)",
+    },
+    {
+        question: "Màu sắc",
+        answers: ["颜色 (yánsè)", "蓝 (lán)"],
+        correct: "颜色 (yánsè)",
+    },
+    {
+        question: "Lượng từ xe",
+        answers: ["辆 (liàng)", "啊 (a)"],
+        correct: "辆 (liàng)",
+    },
+    {
+        question: "Tắt, đóng",
+        answers: ["关 (guān)", "全 (quán)"],
+        correct: "关 (guān)",
+    },
+    {
+        question: "Ảnh, bức ảnh",
+        answers: ["照片 (zhàopiàn)", "看 (kàn)"],
+        correct: "照片 (zhàopiàn)",
+    },
+    {
+        question: "Chỉ,chỉ có, lượng từ động vật",
+        answers: ["只 (zhǐ)", "做 (zuò)"],
+        correct: "只 (zhǐ)",
+    },
+    {
+        question: "Bác sĩ, đại phu",
+        answers: ["大夫 (dàifu)", "医院 (yīyuàn)"],
+        correct: "大夫 (dàifu)",
+    },
+    {
+        question: "Khoảng, đại khái",
+        answers: ["大概 (dàgài)", "外国 (wàiguó)"],
+        correct: "大概 (dàgài)",
+    },
+    {
+        question: "Cửa hàng",
+        answers: ["公司 (gōngsī)", "商店 (shāngdiàn)"],
+        correct: "商店 (shāngdiàn)",
+    },
+    {
+        question: "Luật sư",
+        answers: ["律师 (lǜshī)", "小 (xiǎo)"],
+        correct: "律师 (lǜshī)",
+    },
+    {
+        question: "Ngoại thương (danh từ)",
+        answers: ["外贸 (wàimào)", "多 (duō)"],
+        correct: "外贸 (wàimào)",
     }
 ];
+
 
 
