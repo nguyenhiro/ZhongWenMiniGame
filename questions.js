@@ -1188,12 +1188,13 @@ const questionsByLevel = {
 ],
 2: [
     {
-        question: "22222222",
+        question: "Đang cập nhật",
         answers: ["外贸 (wàimào)", "多 (duō)"],
-        correct: "外贸 (wàimào)",
+        correct: "外贸 ",
     }
 ]
 };
+
 
 
 
