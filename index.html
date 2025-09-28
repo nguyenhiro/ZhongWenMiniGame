@@ -3,19 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Đố Vui</title>
+    <title>Trò Chơi Đố Vui - Sẵn Sàng Thử Thách?</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
     <style>
+        /* ======================== */
+        /* CSS cho Landing Page */
+        /* ======================== */
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
+            text-align: center;
             flex-direction: column;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?quiz,brain,abstract');
         }
+
+        .landing-container {
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .landing-container h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .landing-container p.description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .landing-container .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            outline: none;
+            color: white;
+        }
+
+        .btn-start { background-color: #4CAF50; }
+        .btn-start:hover { background-color: #45a049; transform: translateY(-2px); }
+        .btn-how-to { background-color: #008CBA; }
+        .btn-how-to:hover { background-color: #007bb5; transform: translateY(-2px); }
+        
+        /* Modal Hướng Dẫn */
+        .instructions-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .instructions-modal-content {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            max-width: 500px;
+            width: 90%;
+            text-align: left;
+        }
+
+        .instructions-modal-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .instructions-modal-content button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* ======================== */
+        /* CSS cho Game Container */
+        /* ======================== */
         .game-container {
+            display: none; /* Mặc định ẩn game đi */
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -24,132 +120,86 @@
             max-width: 600px;
             text-align: center;
         }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        #question-counter {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #555;
-        }
-        #timer {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #3498db;
-        }
-        #question {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #333;
-            min-height: 50px;
-        }
-        .answers {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
-        .answer-btn {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            padding: 15px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .answer-btn:hover {
-            background-color: #2980b9;
-        }
-        .answer-btn.correct {
-            background-color: #2ecc71;
-        }
-        .answer-btn.incorrect {
-            background-color: #e74c3c;
-        }
-        #restart-btn {
-            background-color: #f39c12;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: none;
-        }
-        #best-time {
-            margin-top: 10px;
-            font-size: 1.1em;
-            color: #2c3e50;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #fff;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .modal-content button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #fff;
-        }
-        #replayLevel {
-            background-color: #f39c12;
-        }
-        #nextLevel {
-            background-color: #2ecc71;
-        }
-        .level-stats {
-            margin-top: 15px;
-            font-size: 1.1em;
-            color: #555;
-            text-align: left;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-        }
-        .level-stats p {
-            margin: 5px 0;
-        }
-    </style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EE00XE0TZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3EE00XE0TZ');
-</script>
+        /* Các style game cũ của bạn */
+        body.game-active {
+            background-image: none;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .game-active .landing-container {
+            display: none;
+        }
+        
+        .game-active .game-container {
+            display: block; /* Hiển thị game khi body có class 'game-active' */
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        #question-counter { font-size: 1.2em; font-weight: bold; color: #555; }
+        #timer { font-size: 1.5em; font-weight: bold; color: #3498db; }
+        #question { font-size: 1.5em; font-weight: bold; margin-bottom: 20px; color: #333; min-height: 50px; }
+        .answers { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .answer-btn { background-color: #3498db; color: #fff; border: none; padding: 15px; font-size: 1em; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+        .answer-btn:hover { background-color: #2980b9; }
+        .answer-btn.correct { background-color: #2ecc71; }
+        .answer-btn.incorrect { background-color: #e74c3c; }
+        #restart-btn { background-color: #f39c12; color: #fff; border: none; padding: 10px 20px; font-size: 1em; border-radius: 5px; cursor: pointer; margin-top: 20px; display: none; }
+        #best-time { margin-top: 10px; font-size: 1.1em; color: #2c3e50; }
+        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); justify-content: center; align-items: center; }
+        .modal-content { background-color: #fff; margin: auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        .modal-content button { margin: 10px; padding: 10px 20px; font-size: 1em; border: none; border-radius: 5px; cursor: pointer; color: #fff; }
+        #replayLevel { background-color: #f39c12; }
+        #nextLevel { background-color: #2ecc71; }
+        .level-stats { margin-top: 15px; font-size: 1.1em; color: #555; text-align: left; border-top: 1px solid #ccc; padding-top: 10px; }
+        .level-stats p { margin: 5px 0; }
+    </style>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EE00XE0TZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3EE00XE0TZ');
+    </script>
 </head>
 <body>
+    <div class="landing-container" id="landing-page">
+        <header>
+            <h1>Chào mừng đến với Trò Chơi Zhong Wen!</h1>
+        </header>
+        <main>
+            <p class="description">
+                Bạn đã sẵn sàng cho một thử thách từ vựng chưa? 
+                Kiểm tra kiến thức từ vựng của bạn với những câu hỏi đa dạng 
+                và hấp dẫn. Hãy cùng khám phá!
+            </p>
+            <div class="buttons">
+                <button class="btn btn-start" onclick="startGame()">Bắt Đầu Chơi</button>
+                <button class="btn btn-how-to" onclick="showInstructions()">Hướng Dẫn Chơi</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 28092025 Trò Chơi Zhong Wen. Tác giả Nguyễn Hoài Nam.</p>
+        </footer>
+    </div>
+    
+    <div id="instructionsModal" class="instructions-modal">
+        <div class="instructions-modal-content">
+            <h2>Cách chơi:</h2>
+            <ul>
+                <li>Mỗi câu hỏi sẽ có 2 lựa chọn.</li>
+                <li>Chọn đáp án mà bạn cho là đúng nhất.</li>
+                <li>Mục tiêu 1 là trả lời đúng tất cả để vượt qua cấp độ.</li>
+                <li>Mục tiêu 2 là trong thời gian ngắn nhất vượt qua cấp độ.</li>
+                <li>Trả lời sai sẽ quay lại từ đầu, hãy cẩn thận!</li>
+            </ul>
+            <button onclick="hideInstructions()">Đóng</button>
+        </div>
+    </div>
 
-    <div class="game-container">
+    <div class="game-container" id="game-page">
         <div class="header">
             <span id="question-counter">Câu hỏi: 1/10</span>
             <span id="timer">0s</span>
@@ -170,17 +220,21 @@
 
     <script src="questions.js"></script>
     <script>
-        // Data and State Management
+        // DOM Elements
+        const landingPage = document.getElementById('landing-page');
+        const gamePage = document.getElementById('game-page');
+        const instructionsModal = document.getElementById('instructionsModal');
+
+        // Các biến và logic game cũ của bạn (không thay đổi)
         let currentLevel = 1;
-        const maxLevel = 2; // Bạn có thể thay đổi số level tại đây
+        const maxLevel = 2;
         let currentQuestionIndex = 0;
         let score = 0;
-        let levelTime = 0; // Thời gian cho level hiện tại
+        let levelTime = 0;
         let timerId;
         let currentQuestions;
-        let allLevelsStats = {}; // Đối tượng lưu trữ kết quả các level đã hoàn thành
-
-        // DOM Elements
+        let allLevelsStats = {};
+        
         const questionElement = document.getElementById('question');
         const answerButtonsElement = document.querySelector('.answers');
         const questionCounterElement = document.getElementById('question-counter');
@@ -189,7 +243,46 @@
         const resultModal = document.getElementById('resultModal');
         const resultModalContent = document.getElementById('resultModalContent');
 
-        // Timer Functions
+        // Hàm chuyển đổi giữa các trang
+        function showGamePage() {
+        landingPage.style.display = 'none';
+        gamePage.style.display = 'block';
+        // Đặt màu nền và xóa background image khi vào game
+        document.body.style.backgroundColor = '#f0f0f0';
+        document.body.style.backgroundImage = 'none';
+        document.body.style.color = '#333'; // Đổi màu chữ cho dễ đọc trên nền sáng
+        }
+
+        function showLandingPage() {
+        landingPage.style.display = 'block';
+        gamePage.style.display = 'none';
+        // Đặt background image mà không có lớp phủ
+        document.body.style.backgroundImage = 'url("images/brto.png")';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.color = '#fff';
+        }
+
+        function startGame() {
+            showGamePage();
+            // Bắt đầu game khi người dùng nhấn nút
+            const storedStats = localStorage.getItem('gameStats');
+            if (storedStats) {
+                allLevelsStats = JSON.parse(storedStats);
+            }
+            startLevel(1);
+        }
+
+        function showInstructions() {
+            instructionsModal.style.display = 'flex';
+        }
+
+        function hideInstructions() {
+            instructionsModal.style.display = 'none';
+        }
+        
+        // Các hàm logic game cũ của bạn, không cần thay đổi
         function updateTimer() {
             levelTime++;
             timerElement.textContent = `${levelTime}s`;
@@ -205,13 +298,12 @@
             timerElement.textContent = "0s";
         }
 
-        // Game Logic
         function startLevel(level) {
             currentLevel = level;
             currentQuestions = questionsByLevel[currentLevel];
             currentQuestionIndex = 0;
-            score = 0; // Điểm sẽ được tính lại cho mỗi level
-            resetTimer(); // Reset thời gian cho mỗi level
+            score = 0;
+            resetTimer();
             startTimer();
             showQuestion();
             resultModal.style.display = 'none';
@@ -222,12 +314,9 @@
                 endLevel();
                 return;
             }
-
             const currentQuestion = currentQuestions[currentQuestionIndex];
-            
             questionCounterElement.textContent = `Câu hỏi: ${currentQuestionIndex + 1}/${currentQuestions.length} (Level ${currentLevel})`;
             questionElement.textContent = currentQuestion.question;
-
             if (currentQuestion.image) {
                 questionImageElement.src = currentQuestion.image;
                 questionImageElement.style.display = 'block';
@@ -235,18 +324,15 @@
                 questionImageElement.style.display = 'none';
                 questionImageElement.src = '';
             }
-
             const allAnswers = currentQuestion.answers;
             const correctAnswer = currentQuestion.correct;
             const wrongAnswers = allAnswers.filter(answer => answer !== correctAnswer);
             const randomWrongAnswer = wrongAnswers.length > 0 ? wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)] : null;
-            
             let displayAnswers = [correctAnswer];
             if (randomWrongAnswer) {
                 displayAnswers.push(randomWrongAnswer);
             }
             shuffleArray(displayAnswers);
-
             answerButtonsElement.innerHTML = '';
             displayAnswers.forEach(answer => {
                 const button = document.createElement('button');
@@ -260,7 +346,6 @@
         function selectAnswer(selectedAnswer, correctAnswer) {
             const allButtons = document.querySelectorAll('.answer-btn');
             const isCorrect = (selectedAnswer === correctAnswer);
-
             allButtons.forEach(button => {
                 button.disabled = true;
                 if (button.textContent === correctAnswer) {
@@ -269,14 +354,13 @@
                     button.classList.add('incorrect');
                 }
             });
-
             setTimeout(() => {
                 if (isCorrect) {
                     currentQuestionIndex++;
                     score++;
                 } else {
                     alert(`Đáp án sai! Bắt đầu lại Level ${currentLevel}.`);
-                    startLevel(currentLevel); // Chỉ chơi lại level hiện tại
+                    startLevel(currentLevel);
                     return;
                 }
                 showQuestion();
@@ -285,24 +369,17 @@
 
         function endLevel() {
             clearInterval(timerId);
-
-            // Lưu kết quả của level hiện tại vào biến allLevelsStats
             allLevelsStats[currentLevel] = {
                 time: levelTime,
                 score: score
             };
-
-            // Lưu vào localStorage
             localStorage.setItem('gameStats', JSON.stringify(allLevelsStats));
-
             let modalContentHtml = `
                 <h2>Chúc mừng bạn đã hoàn thành Level ${currentLevel}!</h2>
                 <p>Điểm: ${score}/${currentQuestions.length}</p>
                 <p>Thời gian hoàn thành level: ${levelTime} giây</p>
                 <button id="replayLevel">Chơi lại Level ${currentLevel}</button>
             `;
-            
-            // Hiển thị thành tích các level đã hoàn thành
             let statsHtml = '<div class="level-stats"><h3>Thành tích đã đạt</h3>';
             for (let i = 1; i <= currentLevel; i++) {
                 if (allLevelsStats[i]) {
@@ -311,20 +388,16 @@
             }
             statsHtml += '</div>';
             modalContentHtml += statsHtml;
-
             if (currentLevel < maxLevel) {
                 modalContentHtml += `<button id="nextLevel">Tiếp tục Level ${currentLevel + 1}</button>`;
             } else {
                 modalContentHtml += `<h3>Chúc mừng bạn đã hoàn thành toàn bộ game!</h3>`;
             }
-
             resultModalContent.innerHTML = modalContentHtml;
             resultModal.style.display = 'flex';
-
             document.getElementById("replayLevel").onclick = () => {
                 startLevel(currentLevel);
             };
-
             if (currentLevel < maxLevel) {
                 document.getElementById("nextLevel").onclick = () => {
                     startLevel(currentLevel + 1);
@@ -332,7 +405,6 @@
             }
         }
         
-        // Helper function
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -340,16 +412,8 @@
             }
         }
 
-        // Bắt đầu game khi trang được tải
-        document.addEventListener('DOMContentLoaded', () => {
-            // Lấy dữ liệu từ localStorage khi trang được tải
-            const storedStats = localStorage.getItem('gameStats');
-            if (storedStats) {
-                allLevelsStats = JSON.parse(storedStats);
-            }
-            startLevel(1);
-        });
+        // Bắt đầu với trang landing khi trang tải
+        document.addEventListener('DOMContentLoaded', showLandingPage);
     </script>
 </body>
 </html>
-
