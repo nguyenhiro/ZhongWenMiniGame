@@ -176,8 +176,8 @@
                 và hấp dẫn. Hãy cùng khám phá!
             </p>
             <div class="buttons">
-                <button class="btn btn-start" onclick="startGame()">Bắt Đầu Chơi</button>
-                <button class="btn btn-how-to" onclick="showInstructions()">Hướng Dẫn Chơi</button>
+                <button class="btn btn-start" id="startGameBtn">Bắt Đầu Chơi</button>
+                <button class="btn btn-how-to" id="showInstructionsBtn">Hướng Dẫn Chơi</button>
             </div>
         </main>
         <footer>
@@ -199,7 +199,7 @@
                 <li>Mục tiêu 2 là trong thời gian ngắn nhất vượt qua cấp độ.</li>
                 <li>Trả lời sai sẽ quay lại từ đầu, hãy cẩn thận!</li>
             </ul>
-            <button onclick="hideInstructions()">Đóng</button>
+            <button id="hideInstructionsBtn">Đóng</button>
         </div>
     </div>
 
@@ -222,13 +222,17 @@
         </div>
     </div>
 
-    <script src="questions.js"></script>
-    <script>
+    <script type="module">
+        import { questionsByLevel } from './questions.js';
+
         // DOM Elements
         const landingPage = document.getElementById('landing-page');
         const gamePage = document.getElementById('game-page');
         const instructionsModal = document.getElementById('instructionsModal');
-
+        const startGameBtn = document.getElementById('startGameBtn');
+        const showInstructionsBtn = document.getElementById('showInstructionsBtn');
+        const hideInstructionsBtn = document.getElementById('hideInstructionsBtn');
+        
         // Các biến và logic game cũ của bạn (không thay đổi)
         let currentLevel = 1;
         const maxLevel = 2;
@@ -249,28 +253,25 @@
 
         // Hàm chuyển đổi giữa các trang
         function showGamePage() {
-        landingPage.style.display = 'none';
-        gamePage.style.display = 'block';
-        // Đặt màu nền và xóa background image khi vào game
-        document.body.style.backgroundColor = '#f0f0f0';
-        document.body.style.backgroundImage = 'none';
-        document.body.style.color = '#333'; // Đổi màu chữ cho dễ đọc trên nền sáng
+          landingPage.style.display = 'none';
+          gamePage.style.display = 'block';
+          document.body.style.backgroundColor = '#f0f0f0';
+          document.body.style.backgroundImage = 'none';
+          document.body.style.color = '#333';
         }
 
         function showLandingPage() {
-        landingPage.style.display = 'block';
-        gamePage.style.display = 'none';
-        // Đặt background image mà không có lớp phủ
-        document.body.style.backgroundImage = 'url("images/brto.png")';
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center';
-        document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.color = '#fff';
+          landingPage.style.display = 'block';
+          gamePage.style.display = 'none';
+          document.body.style.backgroundImage = 'url("images/brto.png")';
+          document.body.style.backgroundSize = 'cover';
+          document.body.style.backgroundPosition = 'center';
+          document.body.style.backgroundRepeat = 'no-repeat';
+          document.body.style.color = '#fff';
         }
 
         function startGame() {
             showGamePage();
-            // Bắt đầu game khi người dùng nhấn nút
             const storedStats = localStorage.getItem('gameStats');
             if (storedStats) {
                 allLevelsStats = JSON.parse(storedStats);
@@ -286,7 +287,6 @@
             instructionsModal.style.display = 'none';
         }
         
-        // Các hàm logic game cũ của bạn, không cần thay đổi
         function updateTimer() {
             levelTime++;
             timerElement.textContent = `${levelTime}s`;
@@ -415,6 +415,11 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
+
+        // Đính kèm các event listener cho các nút
+        startGameBtn.addEventListener('click', startGame);
+        showInstructionsBtn.addEventListener('click', showInstructions);
+        hideInstructionsBtn.addEventListener('click', hideInstructions);
 
         // Bắt đầu với trang landing khi trang tải
         document.addEventListener('DOMContentLoaded', showLandingPage);
