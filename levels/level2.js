@@ -2489,6 +2489,4 @@ const level2Questions = [
     correct: "晒 (shài)"
   }
 ];
-
-
 export default level2Questions;
