@@ -130,7 +130,7 @@ const level2Questions = [
         correct: "好看 (hǎokàn)",
     },
     {
-        question: "Đồng hồ, giờ",
+        question: "Đơn vị thời gian",
         answers: ["钟 (zhōng)", "表 (biǎo)"],
         correct: "钟 (zhōng)",
     },
@@ -2487,5 +2487,6 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
