@@ -230,7 +230,7 @@ const level2Questions = [
         correct: "愉快 (yúkuài)",
     },
     {
-        question: "Nghiệp dư, ngoài giờ",
+        question: "Nghiệp dư, không chuyên",
         answers: ["业余 (yèyú)", "专业 (zhuānyè)"],
         correct: "业余 (yèyú)",
     },
@@ -280,7 +280,7 @@ const level2Questions = [
         correct: "高兴 (gāoxìng)",
     },
     {
-        question: "Vẽ; bức tranh",
+        question: "Vẽ ( vẽ tranh)",
         answers: ["画 (huà)", "写 (xiě)"],
         correct: "画 (huà)",
     },
@@ -290,7 +290,7 @@ const level2Questions = [
         correct: "画儿 (huàr)",
     },
     {
-        question: "Tanaka (tên riêng Nhật)",
+        question: "Điền Trung (Tanaka)",
         answers: ["田中 (Tiánzhōng)", "山本 (Shānběn)"],
         correct: "田中 (Tiánzhōng)",
     },
@@ -2487,4 +2487,5 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
