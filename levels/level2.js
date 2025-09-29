@@ -1235,7 +1235,7 @@ const level2Questions = [
     correct: "故事 (gùshi)",
   },
   {
-    question: "Hội thoại",
+    question: "Hội thoại (kỹ năng)",
     answers: ["会话 (huìhuà)", "舞会 (wǔhuì)"],
     correct: "会话 (huìhuà)",
   },
@@ -2230,12 +2230,12 @@ const level2Questions = [
     correct: "页 (yè)",
   },
   {
-    question: "Hội thoại",
+    question: "Hội thoại (kỹ năng)",
     answers: ["会话 (huìhuà)", "对话 (duìhuà)"],
     correct: "会话 (huìhuà)",
   },
   {
-    question: "Đọc, học",
+    question: "Đọc, học (học thuộc)",
     answers: ["念 (niàn)", "记 (jì)"],
     correct: "念 (niàn)",
   },
@@ -2255,7 +2255,7 @@ const level2Questions = [
     correct: "听见 (tīngjiàn)",
   },
   {
-    question: "Mở ra",
+    question: "Mở ra (bao quát)",
     answers: ["打开 (dǎkāi)", "开机 (kāijī)"],
     correct: "打开 (dǎkāi)",
   },
@@ -2270,7 +2270,7 @@ const level2Questions = [
     correct: "熟 (shú)",
   },
   {
-    question: "Giờ (đồng hồ, thời gian)",
+    question: "Giờ (đầu giờ)",
     answers: ["钟头 (zhōngtóu)", "时候 (shíhou)"],
     correct: "钟头 (zhōngtóu)",
   },
@@ -2335,7 +2335,7 @@ const level2Questions = [
     correct: "牛奶 (niúnǎi)",
   },
   {
-    question: "Nhưng mà, chỉ",
+    question: "Nhưng mà, chỉ (dùng văn viết, nói)",
     answers: ["不过 (búguò)", "可是 (kěshì)"],
     correct: "不过 (búguò)",
   },
@@ -2395,7 +2395,7 @@ const level2Questions = [
     correct: "一般 (yìbān)",
   },
   {
-    question: "Cảm ơn",
+    question: "Cảm ơn, cảm tạ, biết ơn",
     answers: ["感谢 (gǎnxiè)", "谢谢 (xièxie)"],
     correct: "感谢 (gǎnxiè)",
   },
@@ -2470,7 +2470,7 @@ const level2Questions = [
     correct: "失眠 (shīmián)",
   },
   {
-    question: "Phải",
+    question: "Phải (buộc phải làm)",
     answers: ["必须 (bìxū)", "可以 (kěyǐ)"],
     correct: "必须 (bìxū)",
   },
@@ -2487,6 +2487,7 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
 
