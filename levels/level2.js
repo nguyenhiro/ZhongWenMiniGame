@@ -349,7 +349,6 @@ const level2Questions = [
         answers: ["外边 (wàibian)", "里边 (lǐbian)"],
         correct: "外边 (wàibian)",
     },
-  const questions3 = [
     {
         question: "Đài truyền hình",
         answers: ["电视台 (diànshìtái)", "广播 (guǎngbō)"],
@@ -600,7 +599,6 @@ const level2Questions = [
         answers: ["比赛 (bǐsài)", "练习 (liànxí)"],
         correct: "比赛 (bǐsài)",
     },
-  const questions4 = [
     {
         question: "Thuê",
         answers: ["租 (zū)", "借 (jiè)"],
@@ -2490,4 +2488,5 @@ const level2Questions = [
   },
 ];
 export default level2Questions;
+
 
