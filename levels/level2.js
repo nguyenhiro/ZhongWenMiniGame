@@ -1,5 +1,5 @@
 const level2Questions = [
-  {
+    {
         question: "Bây giờ",
         answers: ["现在 (xiànzài)", "时候 (shíhou)"],
         correct: "现在 (xiànzài)",
@@ -862,318 +862,317 @@ const level2Questions = [
   {
     question: "Tài liệu",
     answers: ["文件 (wénjiàn)", "客户 (kèhù)"],
-    correct: "文件 (wénjiàn)"
+    correct: "文件 (wénjiàn)",
   },
   {
     question: "Khách hàng",
     answers: ["客户 (kèhù)", "同事 (tóngshì)"],
-    correct: "客户 (kèhù)"
+    correct: "客户 (kèhù)",
   },
   {
     question: "Đồng nghiệp",
     answers: ["同事 (tóngshì)", "价格 (jiàgé)"],
-    correct: "同事 (tóngshì)"
+    correct: "同事 (tóngshì)",
   },
   {
     question: "Giá cả",
     answers: ["价格 (jiàgé)", "投资 (tóuzī)"],
-    correct: "价格 (jiàgé)"
+    correct: "价格 (jiàgé)",
   },
   {
     question: "Đầu tư",
     answers: ["投资 (tóuzī)", "房间 (fángjiān)"],
-    correct: "投资 (tóuzī)"
+    correct: "投资 (tóuzī)",
   },
   {
     question: "Phòng (trong nhà)",
     answers: ["房间 (fángjiān)", "公交车 (gōngjiāochē)"],
-    correct: "房间 (fángjiān)"
+    correct: "房间 (fángjiān)",
   },
   {
     question: "Xe buýt",
     answers: ["公交车 (gōngjiāochē)", "厨房 (chúfáng)"],
-    correct: "公交车 (gōngjiāochē)"
+    correct: "公交车 (gōngjiāochē)",
   },
   {
     question: "Nhà bếp",
     answers: ["厨房 (chúfáng)", "文件 (wénjiàn)"],
-    correct: "厨房 (chúfáng)"
+    correct: "厨房 (chúfáng)",
   },
   {
     question: "Khách sáo",
     answers: ["客气 (kèqi)", "投资 (tóuzī)"],
-    correct: "客气 (kèqi)"
+    correct: "客气 (kèqi)",
   },
   {
     question: "Thua lỗ",
     answers: ["亏损 (kuīsǔn)", "价格 (jiàgé)"],
-    correct: "亏损 (kuīsǔn)"
+    correct: "亏损 (kuīsǔn)",
   },
   {
     question: "Trường học",
     answers: ["学校 (xuéxiào)", "房子 (fángzi)"],
-    correct: "学校 (xuéxiào)"
+    correct: "学校 (xuéxiào)",
   },
   {
     question: "Phòng khách",
     answers: ["客厅 (kètīng)", "厨房 (chúfáng)"],
-    correct: "客厅 (kètīng)"
+    correct: "客厅 (kètīng)",
   },
   {
     question: "Phòng ngủ",
     answers: ["卧室 (wòshì)", "房间 (fángjiān)"],
-    correct: "卧室 (wòshì)"
+    correct: "卧室 (wòshì)",
   },
   {
     question: "Nhà",
     answers: ["房子 (fángzi)", "办公室 (bàngōngshì)"],
-    correct: "房子 (fángzi)"
+    correct: "房子 (fángzi)",
   },
   {
     question: "Văn phòng",
     answers: ["办公室 (bàngōngshì)", "文件 (wénjiàn)"],
-    correct: "办公室 (bàngōngshì)"
+    correct: "办公室 (bàngōngshì)",
   },
   {
     question: "Giao thông",
     answers: ["交通 (jiāotōng)", "考试 (kǎoshì)"],
-    correct: "交通 (jiāotōng)"
+    correct: "交通 (jiāotōng)",
   },
   {
     question: "Kỳ thi",
     answers: ["考试 (kǎoshì)", "厨房 (chúfáng)"],
-    correct: "考试 (kǎoshì)"
+    correct: "考试 (kǎoshì)",
   },
   {
     question: "Thể thao",
     answers: ["体育 (tǐyù)", "客户 (kèhù)"],
-    correct: "体育 (tǐyù)"
+    correct: "体育 (tǐyù)",
   },
   {
     question: "Phòng tập thể dục / Nhà thi đấu",
     answers: ["体育馆 (tǐyùguǎn)", "厨房 (chúfáng)"],
-    correct: "体育馆 (tǐyùguǎn)"
+    correct: "体育馆 (tǐyùguǎn)",
   },
   {
     question: "Trạm xe buýt",
     answers: ["公共汽车站 (gōnggòng qìchē zhàn)", "地铁 (dìtiě)"],
-    correct: "公共汽车站 (gōnggòng qìchē zhàn)"
+    correct: "公共汽车站 (gōnggòng qìchē zhàn)",
   },
   {
     question: "Tàu điện ngầm",
     answers: ["地铁 (dìtiě)", "汽车 (qìchē)"],
-    correct: "地铁 (dìtiě)"
+    correct: "地铁 (dìtiě)",
   },
   {
     question: "Gần, lân cận",
     answers: ["附近 (fùjìn)", "旁边 (pángbiān)"],
-    correct: "附近 (fùjìn)"
+    correct: "附近 (fùjìn)",
   },
   {
     question: "Bên cạnh",
     answers: ["旁边 (pángbiān)", "上 (shàng)"],
-    correct: "旁边 (pángbiān)"
+    correct: "旁边 (pángbiān)",
   },
   {
     question: "Diện tích",
     answers: ["面积 (miànjī)", "情况 (qíngkuàng)"],
-    correct: "面积 (miànjī)"
+    correct: "面积 (miànjī)",
   },
   {
     question: "Tầng, lớp",
     answers: ["层 (céng)", "句子 (jùzi)"],
-    correct: "层 (céng)"
+    correct: "层 (céng)",
   },
   {
     question: "Mét vuông",
     answers: ["平方米 (píngfāng mǐ)", "钟头 (zhōngtóu)"],
-    correct: "平方米 (píngfāng mǐ)"
+    correct: "平方米 (píngfāng mǐ)",
   },
   {
     question: "Ánh nắng",
     answers: ["阳光 (yángguāng)", "阴天 (yīntiān)"],
-    correct: "阳光 (yángguāng)"
+    correct: "阳光 (yángguāng)",
   },
   {
     question: "Vợ",
     answers: ["妻子 (qīzi)", "父母 (fùmǔ)"],
-    correct: "妻子 (qīzi)"
+    correct: "妻子 (qīzi)",
   },
   {
     question: "Cha mẹ",
     answers: ["父母 (fùmǔ)", "妻子 (qīzi)"],
-    correct: "父母 (fùmǔ)"
+    correct: "父母 (fùmǔ)",
   },
   {
     question: "Tiền thuê nhà",
     answers: ["房租 (fángzū)", "工资 (gōngzī)"],
-    correct: "房租 (fángzū)"
+    correct: "房租 (fángzū)",
   },
   {
     question: "Tắc đường",
     answers: ["堵车 (dǔchē)", "散步 (sànbù)"],
-    correct: "堵车 (dǔchē)"
+    correct: "堵车 (dǔchē)",
   },
   {
     question: "Vội, gấp",
     answers: ["赶 (gǎn)", "慢 (màn)"],
-    correct: "赶 (gǎn)"
+    correct: "赶 (gǎn)",
   },
   {
     question: "Nếu",
     answers: ["要是 (yàoshi)", "还是 (háishi)"],
-    correct: "要是 (yàoshi)"
+    correct: "要是 (yàoshi)",
   },
   {
     question: "Tuy rằng",
     answers: ["虽然 (suīrán)", "因为 (yīnwèi)"],
-    correct: "虽然 (suīrán)"
+    correct: "虽然 (suīrán)",
   },
   {
     question: "Thật, thực sự",
     answers: ["真 (zhēn)", "假 (jiǎ)"],
-    correct: "真 (zhēn)"
+    correct: "真 (zhēn)",
   },
   {
     question: "Sông",
     answers: ["河 (hé)", "海 (hǎi)"],
-    correct: "河 (hé)"
+    correct: "河 (hé)",
   },
   {
     question: "Đề bài, câu hỏi",
     answers: ["题 (tí)", "页 (yè)"],
-    correct: "题 (tí)"
+    correct: "题 (tí)",
   },
   {
     question: "Hoàn thành, xong",
     answers: ["完 (wán)", "开 (kāi)"],
-    correct: "完 (wán)"
+    correct: "完 (wán)",
   },
   {
     question: "Đi lên",
     answers: ["上去 (shàngqù)", "下来 (xiàlái)"],
-    correct: "上去 (shàngqù)"
+    correct: "上去 (shàngqù)",
   },
   {
     question: "Trạm, ga",
     answers: ["站 (zhàn)", "句子 (jùzi)"],
-    correct: "站 (zhàn)"
+    correct: "站 (zhàn)",
   },
   {
     question: "Giao thông",
     answers: ["交通 (jiāotōng)", "故事 (gùshi)"],
-    correct: "交通 (jiāotōng)"
+    correct: "交通 (jiāotōng)",
   },
   {
     question: "Thuận tiện",
     answers: ["方便 (fāngbiàn)", "乱 (luàn)"],
-    correct: "方便 (fāngbiàn)"
+    correct: "方便 (fāngbiàn)",
   },
   {
     question: "Xe buýt",
     answers: ["公共汽车 (gōnggòng qìchē)", "火车 (huǒchē)"],
-    correct: "公共汽车 (gōnggòng qìchē)"
+    correct: "公共汽车 (gōnggòng qìchē)",
   },
   {
     question: "Bến xe, trạm xe",
     answers: ["车站 (chēzhàn)", "教室 (jiàoshì)"],
-    correct: "车站 (chēzhàn)"
+    correct: "车站 (chēzhàn)",
   },
   {
     question: "Tàu điện ngầm",
     answers: ["地铁 (dìtiě)", "飞机 (fēijī)"],
-    correct: "地铁 (dìtiě)"
+    correct: "地铁 (dìtiě)",
   },
   {
     question: "Gần, lân cận",
     answers: ["附近 (fùjìn)", "前 (qián)"],
-    correct: "附近 (fùjìn)"
+    correct: "附近 (fùjìn)",
   },
   {
     question: "Nhà thi đấu thể thao",
     answers: ["体育馆 (tǐyùguǎn)", "操场 (cāochǎng)"],
-    correct: "体育馆 (tǐyùguǎn)"
+    correct: "体育馆 (tǐyùguǎn)",
   },
   {
     question: "Kỳ thi",
     answers: ["考试 (kǎoshì)", "作业 (zuòyè)"],
-    correct: "考试 (kǎoshì)"
+    correct: "考试 (kǎoshì)",
   },
   {
     question: "Câu",
     answers: ["句子 (jùzi)", "河 (hé)"],
-    correct: "句子 (jùzi)"
+    correct: "句子 (jùzi)",
   },
   {
     question: "Câu chuyện",
     answers: ["故事 (gùshi)", "办法 (bànfǎ)"],
-    correct: "故事 (gùshi)"
+    correct: "故事 (gùshi)",
   },
-  [
   {
     question: "Hài lòng",
     answers: ["满意 (mǎnyì)", "难过 (nánguò)"],
-    correct: "满意 (mǎnyì)"
+    correct: "满意 (mǎnyì)",
   },
   {
     question: "Xung quanh",
     answers: ["周围 (zhōuwéi)", "里面 (lǐmiàn)"],
-    correct: "周围 (zhōuwéi)"
+    correct: "周围 (zhōuwéi)",
   },
   {
     question: "Môi trường",
     answers: ["环境 (huánjìng)", "气候 (qìhòu)"],
-    correct: "环境 (huánjìng)"
+    correct: "环境 (huánjìng)",
   },
   {
     question: "Lộn xộn",
     answers: ["乱 (luàn)", "干净 (gānjìng)"],
-    correct: "乱 (luàn)"
+    correct: "乱 (luàn)",
   },
   {
     question: "Nhà bếp",
     answers: ["厨房 (chúfáng)", "客厅 (kètīng)"],
-    correct: "厨房 (chúfáng)"
+    correct: "厨房 (chúfáng)",
   },
   {
     question: "Phòng ngủ",
     answers: ["卧室 (wòshì)", "办公室 (bàngōngshì)"],
-    correct: "卧室 (wòshì)"
+    correct: "卧室 (wòshì)",
   },
   {
     question: "Phòng khách",
     answers: ["客厅 (kètīng)", "礼堂 (lǐtáng)"],
-    correct: "客厅 (kètīng)"
+    correct: "客厅 (kètīng)",
   },
   {
     question: "Diện tích",
     answers: ["面积 (miànjī)", "长度 (chángdù)"],
-    correct: "面积 (miànjī)"
+    correct: "面积 (miànjī)",
   },
   {
     question: "Tầng, lớp",
     answers: ["层 (céng)", "条 (tiáo)"],
-    correct: "层 (céng)"
+    correct: "层 (céng)",
   },
   {
     question: "Mét vuông",
     answers: ["平方米 (píngfāng mǐ)", "公里 (gōnglǐ)"],
-    correct: "平方米 (píngfāng mǐ)"
+    correct: "平方米 (píngfāng mǐ)",
   },
   {
     question: "Ánh nắng",
     answers: ["阳光 (yángguāng)", "月亮 (yuèliang)"],
-    correct: "阳光 (yángguāng)"
+    correct: "阳光 (yángguāng)",
   },
   {
     question: "Vợ",
     answers: ["妻子 (qīzi)", "丈夫 (zhàngfu)"],
-    correct: "妻子 (qīzi)"
+    correct: "妻子 (qīzi)",
   },
   {
     question: "Tình hình",
     answers: ["情况 (qíngkuàng)", "故事 (gùshi)"],
-    correct: "情况 (qíngkuàng)"
+    correct: "情况 (qíngkuàng)",
   },
   {
     question: "Tắc đường",
@@ -1183,1310 +1182,1308 @@ const level2Questions = [
   {
     question: "Vội, gấp",
     answers: ["赶 (gǎn)", "慢 (màn)"],
-    correct: "赶 (gǎn)"
+    correct: "赶 (gǎn)",
   },
   {
     question: "Nếu",
     answers: ["要是 (yàoshi)", "因为 (yīnwèi)"],
-    correct: "要是 (yàoshi)"
+    correct: "要是 (yàoshi)",
   },
   {
     question: "Tiền thuê nhà",
     answers: ["房租 (fángzū)", "房子 (fángzi)"],
-    correct: "房租 (fángzū)"
+    correct: "房租 (fángzū)",
   },
   {
     question: "Sông",
     answers: ["河 (hé)", "湖 (hú)"],
-    correct: "河 (hé)"
+    correct: "河 (hé)",
   },
   {
     question: "Bên cạnh",
     answers: ["旁边 (pángbiān)", "中间 (zhōngjiān)"],
-    correct: "旁边 (pángbiān)"
+    correct: "旁边 (pángbiān)",
   },
   {
     question: "Kỳ thi",
     answers: ["考试 (kǎoshì)", "比赛 (bǐsài)"],
-    correct: "考试 (kǎoshì)"
+    correct: "考试 (kǎoshì)",
   },
   {
     question: "Câu hỏi, đề bài",
     answers: ["题 (tí)", "词 (cí)"],
-    correct: "题 (tí)"
+    correct: "题 (tí)",
   },
   {
     question: "Điểm số, thành tích",
     answers: ["成绩 (chéngjì)", "水平 (shuǐpíng)"],
-    correct: "成绩 (chéngjì)"
+    correct: "成绩 (chéngjì)",
   },
   {
     question: "Tệ quá, hỏng rồi",
     answers: ["糟糕 (zāogāo)", "不错 (búcuò)"],
-    correct: "糟糕 (zāogāo)"
+    correct: "糟糕 (zāogāo)",
   },
   {
     question: "Trả lời thư",
     answers: ["回信 (huíxìn)", "写信 (xiěxìn)"],
-    correct: "回信 (huíxìn)"
+    correct: "回信 (huíxìn)",
   },
   {
     question: "Câu chuyện",
     answers: ["故事 (gùshi)", "句子 (jùzi)"],
-    correct: "故事 (gùshi)"
+    correct: "故事 (gùshi)",
   },
   {
     question: "Hội thoại",
     answers: ["会话 (huìhuà)", "舞会 (wǔhuì)"],
-    correct: "会话 (huìhuà)"
+    correct: "会话 (huìhuà)",
   },
   {
     question: "Trả lời",
     answers: ["答 (dá)", "问 (wèn)"],
-    correct: "答 (dá)"
+    correct: "答 (dá)",
   },
   {
     question: "Biện pháp, cách làm",
     answers: ["办法 (bànfǎ)", "机会 (jīhuì)"],
-    correct: "办法 (bànfǎ)"
+    correct: "办法 (bànfǎ)",
   },
   {
     question: "Nghe thấy",
     answers: ["听见 (tīngjiàn)", "看见 (kànjiàn)"],
-    correct: "听见 (tīngjiàn)"
+    correct: "听见 (tīngjiàn)",
   },
   {
     question: "Bài tập",
     answers: ["作业 (zuòyè)", "考试 (kǎoshì)"],
-    correct: "作业 (zuòyè)"
+    correct: "作业 (zuòyè)",
   },
   {
     question: "Thuộc, quen, chín",
     answers: ["熟 (shú)", "生 (shēng)"],
-    correct: "熟 (shú)"
+    correct: "熟 (shú)",
   },
   {
     question: "Thói quen",
     answers: ["习惯 (xíguàn)", "生活 (shēnghuó)"],
-    correct: "习惯 (xíguàn)"
+    correct: "习惯 (xíguàn)",
   },
   {
     question: "Khí hậu",
     answers: ["气候 (qìhòu)", "天气 (tiānqì)"],
-    correct: "气候 (qìhòu)"
+    correct: "气候 (qìhòu)",
   },
   {
     question: "Khô, hanh",
     answers: ["干燥 (gānzào)", "湿润 (shīrùn)"],
-    correct: "干燥 (gānzào)"
+    correct: "干燥 (gānzào)",
   },
   {
     question: "Sạch sẽ",
     answers: ["干净 (gānjìng)", "乱 (luàn)"],
-    correct: "干净 (gānjìng)"
+    correct: "干净 (gānjìng)",
   },
-    [
   {
     question: "Món ăn, rau",
     answers: ["菜 (cài)", "牛奶 (niúnǎi)"],
-    correct: "菜 (cài)"
+    correct: "菜 (cài)",
   },
   {
     question: "Béo ngậy, dầu mỡ",
     answers: ["油腻 (yóunì)", "干净 (gānjìng)"],
-    correct: "油腻 (yóunì)"
+    correct: "油腻 (yóunì)",
   },
   {
     question: "Sữa bò",
     answers: ["牛奶 (niúnǎi)", "鱼 (yú)"],
-    correct: "牛奶 (niúnǎi)"
+    correct: "牛奶 (niúnǎi)",
   },
   {
     question: "Nhưng mà, chỉ",
     answers: ["不过 (búguò)", "所以 (suǒyǐ)"],
-    correct: "不过 (búguò)"
+    correct: "不过 (búguò)",
   },
   {
     question: "Giờ nghỉ giữa tiết",
     answers: ["课间 (kèjiān)", "钟头 (zhōngtóu)"],
-    correct: "课间 (kèjiān)"
+    correct: "课间 (kèjiān)",
   },
   {
     question: "Miếng, cục, đồng (tiền)",
     answers: ["块 (kuài)", "条 (tiáo)"],
-    correct: "块 (kuài)"
+    correct: "块 (kuài)",
   },
   {
     question: "Từ trước đến nay",
     answers: ["从来 (cónglái)", "已经 (yǐjīng)"],
-    correct: "从来 (cónglái)"
+    correct: "从来 (cónglái)",
   },
   {
     question: "Đồ ăn nhẹ",
     answers: ["点心 (diǎnxīn)", "牛肉 (niúròu)"],
-    correct: "点心 (diǎnxīn)"
+    correct: "点心 (diǎnxīn)",
   },
   {
     question: "Giấc ngủ trưa",
     answers: ["午觉 (wǔjiào)", "晚 (wǎn)"],
-    correct: "午觉 (wǔjiào)"
+    correct: "午觉 (wǔjiào)",
   },
   {
     question: "Bơi",
     answers: ["游泳 (yóuyǒng)", "跑步 (pǎobù)"],
-    correct: "游泳 (yóuyǒng)"
+    correct: "游泳 (yóuyǒng)",
   },
   {
     question: "Đi dạo",
     answers: ["散步 (sànbù)", "跑 (pǎo)"],
-    correct: "散步 (sànbù)"
+    correct: "散步 (sànbù)",
   },
   {
     question: "Bài vở, môn học",
     answers: ["功课 (gōngkè)", "作业 (zuòyè)"],
-    correct: "功课 (gōngkè)"
+    correct: "功课 (gōngkè)",
   },
   {
     question: "Nhớ kỹ",
     answers: ["记住 (jìzhù)", "忘 (wàng)"],
-    correct: "记住 (jìzhù)"
+    correct: "记住 (jìzhù)",
   },
   {
     question: "Ghi, nhớ",
     answers: ["记 (jì)", "看 (kàn)"],
-    correct: "记 (jì)"
+    correct: "记 (jì)",
   },
   {
     question: "Bình thường",
     answers: ["一般 (yìbān)", "特别 (tèbié)"],
-    correct: "一般 (yìbān)"
+    correct: "一般 (yìbān)",
   },
   {
     question: "Cảm ơn",
     answers: ["感谢 (gǎnxiè)", "祝贺 (zhùhè)"],
-    correct: "感谢 (gǎnxiè)"
+    correct: "感谢 (gǎnxiè)",
   },
   {
     question: "Cha mẹ",
     answers: ["父母 (fùmǔ)", "妻子 (qīzi)"],
-    correct: "父母 (fùmǔ)"
+    correct: "父母 (fùmǔ)",
   },
   {
     question: "Cơ hội",
     answers: ["机会 (jīhuì)", "办法 (bànfǎ)"],
-    correct: "机会 (jīhuì)"
+    correct: "机会 (jīhuì)",
   },
   {
     question: "Thì ra, vốn dĩ",
     answers: ["原来 (yuánlái)", "后来 (hòulái)"],
-    correct: "原来 (yuánlái)"
+    correct: "原来 (yuánlái)",
   },
   {
     question: "Kéo dài",
     answers: ["延长 (yáncháng)", "缩短 (suōduǎn)"],
-    correct: "延长 (yáncháng)"
+    correct: "延长 (yáncháng)",
   },
   {
     question: "Luyện tập",
     answers: ["练 (liàn)", "学 (xué)"],
-    correct: "练 (liàn)"
+    correct: "练 (liàn)",
   },
   {
     question: "Khí công",
     answers: ["气功 (qìgōng)", "功课 (gōngkè)"],
-    correct: "气功 (qìgōng)"
+    correct: "气功 (qìgōng)",
   },
   {
     question: "Không nhất định",
     answers: ["不一定 (bù yídìng)", "必须 (bìxū)"],
-    correct: "不一定 (bù yídìng)"
+    correct: "不一定 (bù yídìng)",
   },
   {
     question: "Giờ (thời gian)",
     answers: ["钟头 (zhōngtóu)", "分钟 (fēnzhōng)"],
-    correct: "钟头 (zhōngtóu)"
+    correct: "钟头 (zhōngtóu)",
   },
   {
     question: "Hiệu quả",
     answers: ["效果 (xiàoguǒ)", "情况 (qíngkuàng)"],
-    correct: "效果 (xiàoguǒ)"
+    correct: "效果 (xiàoguǒ)",
   },
   {
     question: "Khá, rất",
     answers: ["挺 (tǐng)", "真 (zhēn)"],
-    correct: "挺 (tǐng)"
+    correct: "挺 (tǐng)",
   },
   {
     question: "Lợi ích",
     answers: ["好处 (hǎochu)", "坏处 (huàichu)"],
-    correct: "好处 (hǎochu)"
+    correct: "好处 (hǎochu)",
   },
   {
     question: "Tác hại",
     answers: ["坏处 (huàichu)", "好处 (hǎochu)"],
-    correct: "坏处 (huàichu)"
+    correct: "坏处 (huàichu)",
   },
   {
     question: "Bệnh mãn tính",
     answers: ["慢性病 (mànxìngbìng)", "肠炎 (chángyán)"],
-    correct: "慢性病 (mànxìngbìng)"
+    correct: "慢性病 (mànxìngbìng)",
   },
   {
     question: "Cao huyết áp",
     answers: ["高血压 (gāoxuèyā)", "失眠 (shīmián)"],
-    correct: "高血压 (gāoxuèyā)"
+    correct: "高血压 (gāoxuèyā)",
   },
   {
     question: "Mất ngủ",
     answers: ["失眠 (shīmián)", "寂寞 (jìmò)"],
-    correct: "失眠 (shīmián)"
+    correct: "失眠 (shīmián)",
   },
   {
     question: "Phải",
     answers: ["必须 (bìxū)", "可以 (kěyǐ)"],
-    correct: "必须 (bìxū)"
+    correct: "必须 (bìxū)",
   },
   {
     question: "Cá lớn",
     answers: ["大鱼 (dàyú)", "牛肉 (niúròu)"],
-    correct: "大鱼 (dàyú)"
+    correct: "大鱼 (dàyú)",
   },
   {
     question: "Phơi nắng, chiếu nắng",
     answers: ["晒 (shài)", "冷 (lěng)"],
-    correct: "晒 (shài)"
+    correct: "晒 (shài)",
   },
         {
     question: "Đài truyền hình",
     answers: ["电视台 (diànshìtái)", "图书馆 (túshūguǎn)"],
-    correct: "电视台 (diànshìtái)"
+    correct: "电视台 (diànshìtái)",
   },
   {
     question: "Biểu diễn, trình diễn",
     answers: ["表演 (biǎoyǎn)", "比赛 (bǐsài)"],
-    correct: "表演 (biǎoyǎn)"
+    correct: "表演 (biǎoyǎn)",
   },
   {
     question: "Tiết mục, chương trình",
     answers: ["节目 (jiémù)", "作业 (zuòyè)"],
-    correct: "节目 (jiémù)"
+    correct: "节目 (jiémù)",
   },
   {
     question: "Sẵn lòng, đồng ý",
     answers: ["愿意 (yuànyì)", "忘 (wàng)"],
-    correct: "愿意 (yuànyì)"
+    correct: "愿意 (yuànyì)",
   },
   {
     question: "Không tệ, khá tốt",
     answers: ["不错 (búcuò)", "糟糕 (zāogāo)"],
-    correct: "不错 (búcuò)"
+    correct: "不错 (búcuò)",
   },
   {
     question: "Tiến bộ",
     answers: ["进步 (jìnbù)", "退步 (tuìbù)"],
-    correct: "进步 (jìnbù)"
+    correct: "进步 (jìnbù)",
   },
   {
     question: "Trình độ, mức độ",
     answers: ["水平 (shuǐpíng)", "成绩 (chéngjì)"],
-    correct: "水平 (shuǐpíng)"
+    correct: "水平 (shuǐpíng)",
   },
   {
     question: "Nâng cao",
     answers: ["提高 (tígāo)", "降低 (jiàngdī)"],
-    correct: "提高 (tígāo)"
+    correct: "提高 (tígāo)",
   },
   {
     question: "Lưu loát",
     answers: ["流利 (liúlì)", "努力 (nǔlì)"],
-    correct: "流利 (liúlì)"
+    correct: "流利 (liúlì)",
   },
   {
     question: "Nỗ lực, cố gắng",
     answers: ["努力 (nǔlì)", "懒 (lǎn)"],
-    correct: "努力 (nǔlì)"
+    correct: "努力 (nǔlì)",
   },
   {
     question: "Nghiêm túc, chăm chỉ",
     answers: ["认真 (rènzhēn)", "马虎 (mǎhu)"],
-    correct: "认真 (rènzhēn)"
+    correct: "认真 (rènzhēn)",
   },
   {
     question: "Vận động, thể thao",
     answers: ["运动 (yùndòng)", "休息 (xiūxi)"],
-    correct: "运动 (yùndòng)"
+    correct: "运动 (yùndòng)",
   },
   {
     question: "Chạy bộ",
     answers: ["跑步 (pǎobù)", "游泳 (yóuyǒng)"],
-    correct: "跑步 (pǎobù)"
+    correct: "跑步 (pǎobù)",
   },
   {
     question: "Bóng rổ",
     answers: ["篮球 (lánqiú)", "足球 (zúqiú)"],
-    correct: "篮球 (lánqiú)"
+    correct: "篮球 (lánqiú)",
   },
   {
     question: "Trận đấu, thi đấu",
     answers: ["比赛 (bǐsài)", "上课 (shàngkè)"],
-    correct: "比赛 (bǐsài)"
+    correct: "比赛 (bǐsài)",
   },
   {
     question: "Đội",
     answers: ["队 (duì)", "群 (qún)"],
-    correct: "队 (duì)"
+    correct: "队 (duì)",
   },
   {
     question: "Thua",
     answers: ["输 (shū)", "赢 (yíng)"],
-    correct: "输 (shū)"
+    correct: "输 (shū)",
   },
   {
     question: "Thắng",
     answers: ["赢 (yíng)", "输 (shū)"],
-    correct: "赢 (yíng)"
+    correct: "赢 (yíng)",
   },
   {
     question: "Chúc mừng",
     answers: ["祝贺 (zhùhè)", "道歉 (dàoqiàn)"],
-    correct: "祝贺 (zhùhè)"
+    correct: "祝贺 (zhùhè)",
   },
   {
     question: "Thi, kiểm tra",
     answers: ["考 (kǎo)", "答 (dá)"],
-    correct: "考 (kǎo)"
+    correct: "考 (kǎo)",
   },
   {
     question: "Bệnh nhân",
     answers: ["病人 (bìngrén)", "医生 (yīshēng)"],
-    correct: "病人 (bìngrén)"
+    correct: "病人 (bìngrén)",
   },
   {
     question: "Bụng",
     answers: ["肚子 (dùzi)", "头 (tóu)"],
-    correct: "肚子 (dùzi)"
+    correct: "肚子 (dùzi)",
   },
   {
     question: "Tiêu chảy",
     answers: ["拉肚子 (lā dùzi)", "咳嗽 (késou)"],
-    correct: "拉肚子 (lā dùzi)"
+    correct: "拉肚子 (lā dùzi)",
   },
   {
     question: "Thịt bò",
     answers: ["牛肉 (niúròu)", "猪肉 (zhūròu)"],
-    correct: "牛肉 (niúròu)"
+    correct: "牛肉 (niúròu)",
   },
   {
     question: "Xét nghiệm",
     answers: ["化验 (huàyàn)", "检查 (jiǎnchá)"],
-    correct: "化验 (huàyàn)"
+    correct: "化验 (huàyàn)",
   },
   {
     question: "Phân, đi đại tiện",
     answers: ["大便 (dàbiàn)", "小便 (xiǎobiàn)"],
-    correct: "大便 (dàbiàn)"
+    correct: "大便 (dàbiàn)",
   },
   {
     question: "Khám, kiểm tra",
     answers: ["检查 (jiǎnchá)", "化验 (huàyàn)"],
-    correct: "检查 (jiǎnchá)"
+    correct: "检查 (jiǎnchá)",
   },
   {
     question: "Kết quả",
     answers: ["结果 (jiéguǒ)", "机会 (jīhuì)"],
-    correct: "结果 (jiéguǒ)"
+    correct: "结果 (jiéguǒ)",
   },
   {
     question: "Viêm ruột",
     answers: ["肠炎 (chángyán)", "感冒 (gǎnmào)"],
-    correct: "肠炎 (chángyán)"
+    correct: "肠炎 (chángyán)",
   },
   {
     question: "Tiêu hóa",
     answers: ["消化 (xiāohuà)", "呼吸 (hūxī)"],
-    correct: "消化 (xiāohuà)"
+    correct: "消化 (xiāohuà)",
   },
   {
     question: "Kê đơn thuốc",
     answers: ["开药 (kāi yào)", "买药 (mǎi yào)"],
-    correct: "开药 (kāi yào)"
+    correct: "开药 (kāi yào)",
   },
   {
     question: "Tiêm thuốc",
     answers: ["打针 (dǎzhēn)", "吃药 (chī yào)"],
-    correct: "打针 (dǎzhēn)"
+    correct: "打针 (dǎzhēn)",
   },
   {
     question: "Cô đơn, hiu quạnh",
     answers: ["寂寞 (jìmò)", "热闹 (rènào)"],
-    correct: "寂寞 (jìmò)"
+    correct: "寂寞 (jìmò)",
   },
   {
     question: "Buồn, đau lòng",
     answers: ["难过 (nánguò)", "高兴 (gāoxìng)"],
-    correct: "难过 (nánguò)"
+    correct: "难过 (nánguò)",
   },
   {
     question: "Hội trường",
     answers: ["礼堂 (lǐtáng)", "教室 (jiàoshì)"],
-    correct: "礼堂 (lǐtáng)"
+    correct: "礼堂 (lǐtáng)",
   },
   {
     question: "Vũ hội, dạ vũ",
     answers: ["舞会 (wǔhuì)", "运动会 (yùndònghuì)"],
-    correct: "舞会 (wǔhuì)"
+    correct: "舞会 (wǔhuì)",
   },
   {
     question: "Nhảy múa, khiêu vũ",
     answers: ["跳舞 (tiàowǔ)", "唱歌 (chànggē)"],
-    correct: "跳舞 (tiàowǔ)"
+    correct: "跳舞 (tiàowǔ)",
   },
   {
     question: "Thuê",
     answers: ["租 (zū)", "买 (mǎi)"],
-    correct: "租 (zū)"
+    correct: "租 (zū)",
   },
         {
     question: "Bộ, căn (nhà, phòng)",
     answers: ["套 (tào)", "层 (céng)"],
-    correct: "套 (tào)"
+    correct: "套 (tào)",
   },
   {
     question: "Nhà",
     answers: ["房子 (fángzi)", "学校 (xuéxiào)"],
-    correct: "房子 (fángzi)"
+    correct: "房子 (fángzi)",
   },
   {
     question: "Hài lòng",
     answers: ["满意 (mǎnyì)", "失望 (shīwàng)"],
-    correct: "满意 (mǎnyì)"
+    correct: "满意 (mǎnyì)",
   },
   {
     question: "Xung quanh",
     answers: ["周围 (zhōuwéi)", "旁边 (pángbiān)"],
-    correct: "周围 (zhōuwéi)"
+    correct: "周围 (zhōuwéi)",
   },
   {
     question: "Môi trường",
     answers: ["环境 (huánjìng)", "气候 (qìhòu)"],
-    correct: "环境 (huánjìng)"
+    correct: "环境 (huánjìng)",
   },
   {
     question: "Lộn xộn",
     answers: ["乱 (luàn)", "整齐 (zhěngqí)"],
-    correct: "乱 (luàn)"
+    correct: "乱 (luàn)",
   },
   {
     question: "Nhà bếp",
     answers: ["厨房 (chúfáng)", "客厅 (kètīng)"],
-    correct: "厨房 (chúfáng)"
+    correct: "厨房 (chúfáng)",
   },
   {
     question: "Phòng ngủ",
     answers: ["卧室 (wòshì)", "教室 (jiàoshì)"],
-    correct: "卧室 (wòshì)"
+    correct: "卧室 (wòshì)",
   },
   {
     question: "Phòng khách",
     answers: ["客厅 (kètīng)", "礼堂 (lǐtáng)"],
-    correct: "客厅 (kètīng)"
+    correct: "客厅 (kètīng)",
   },
   {
     question: "Diện tích",
     answers: ["面积 (miànjī)", "长度 (chángdù)"],
-    correct: "面积 (miànjī)"
+    correct: "面积 (miànjī)",
   },
   {
     question: "Tầng, lớp",
     answers: ["层 (céng)", "楼 (lóu)"],
-    correct: "层 (céng)"
+    correct: "层 (céng)",
   },
   {
     question: "Mét vuông",
     answers: ["平方米 (píngfāng mǐ)", "公里 (gōnglǐ)"],
-    correct: "平方米 (píngfāng mǐ)"
+    correct: "平方米 (píngfāng mǐ)",
   },
   {
     question: "Đi lên",
     answers: ["上去 (shàngqù)", "下来 (xiàlái)"],
-    correct: "上去 (shàngqù)"
+    correct: "上去 (shàngqù)",
   },
   {
     question: "Ánh nắng",
     answers: ["阳光 (yángguāng)", "月光 (yuèguāng)"],
-    correct: "阳光 (yángguāng)"
+    correct: "阳光 (yángguāng)",
   },
   {
     question: "Vợ",
     answers: ["妻子 (qīzi)", "丈夫 (zhàngfu)"],
-    correct: "妻子 (qīzi)"
+    correct: "妻子 (qīzi)",
   },
   {
     question: "Tình hình",
     answers: ["情况 (qíngkuàng)", "环境 (huánjìng)"],
-    correct: "情况 (qíngkuàng)"
+    correct: "情况 (qíngkuàng)",
   },
   {
     question: "Mới, chỉ",
     answers: ["才 (cái)", "已经 (yǐjīng)"],
-    correct: "才 (cái)"
+    correct: "才 (cái)",
   },
   {
     question: "Tắc đường",
     answers: ["堵车 (dǔchē)", "走路 (zǒulù)"],
-    correct: "堵车 (dǔchē)"
+    correct: "堵车 (dǔchē)",
   },
   {
     question: "Vội, gấp",
     answers: ["赶 (gǎn)", "慢 (màn)"],
-    correct: "赶 (gǎn)"
+    correct: "赶 (gǎn)",
   },
   {
     question: "Nếu",
     answers: ["要是 (yàoshi)", "因为 (yīnwèi)"],
-    correct: "要是 (yàoshi)"
+    correct: "要是 (yàoshi)",
   },
   {
     question: "Tiền thuê nhà",
     answers: ["房租 (fángzū)", "水费 (shuǐfèi)"],
-    correct: "房租 (fángzū)"
+    correct: "房租 (fángzū)",
   },
   {
     question: "Tuy rằng",
     answers: ["虽然 (suīrán)", "但是 (dànshì)"],
-    correct: "虽然 (suīrán)"
+    correct: "虽然 (suīrán)",
   },
   {
     question: "Thật, thực sự",
     answers: ["真 (zhēn)", "假 (jiǎ)"],
-    correct: "真 (zhēn)"
+    correct: "真 (zhēn)",
   },
   {
     question: "Con sông",
     answers: ["河 (hé)", "湖 (hú)"],
-    correct: "河 (hé)"
+    correct: "河 (hé)",
   },
   {
     question: "Giao thông",
     answers: ["交通 (jiāotōng)", "车站 (chēzhàn)"],
-    correct: "交通 (jiāotōng)"
+    correct: "交通 (jiāotōng)",
   },
   {
     question: "Thuận tiện",
     answers: ["方便 (fāngbiàn)", "麻烦 (máfan)"],
-    correct: "方便 (fāngbiàn)"
+    correct: "方便 (fāngbiàn)",
   },
   {
     question: "Trạm, ga",
     answers: ["站 (zhàn)", "楼 (lóu)"],
-    correct: "站 (zhàn)"
+    correct: "站 (zhàn)",
   },
   {
     question: "Xe buýt",
     answers: ["公共汽车 (gōnggòng qìchē)", "火车 (huǒchē)"],
-    correct: "公共汽车 (gōnggòng qìchē)"
+    correct: "公共汽车 (gōnggòng qìchē)",
   },
   {
     question: "Bến xe, trạm xe",
     answers: ["车站 (chēzhàn)", "机场 (jīchǎng)"],
-    correct: "车站 (chēzhàn)"
+    correct: "车站 (chēzhàn)",
   },
   {
     question: "Bên cạnh",
     answers: ["旁边 (pángbiān)", "中间 (zhōngjiān)"],
-    correct: "旁边 (pángbiān)"
+    correct: "旁边 (pángbiān)",
   },
   {
     question: "Tàu điện ngầm",
     answers: ["地铁 (dìtiě)", "公共汽车 (gōnggòng qìchē)"],
-    correct: "地铁 (dìtiě)"
+    correct: "地铁 (dìtiě)",
   },
   {
     question: "Gần, lân cận",
     answers: ["附近 (fùjìn)", "远 (yuǎn)"],
-    correct: "附近 (fùjìn)"
+    correct: "附近 (fùjìn)",
   },
   {
     question: "Nhà thi đấu thể thao",
     answers: ["体育馆 (tǐyùguǎn)", "电影院 (diànyǐngyuàn)"],
-    correct: "体育馆 (tǐyùguǎn)"
+    correct: "体育馆 (tǐyùguǎn)",
   },
   {
     question: "Kỳ thi",
     answers: ["考试 (kǎoshì)", "比赛 (bǐsài)"],
-    correct: "考试 (kǎoshì)"
+    correct: "考试 (kǎoshì)",
   },
   {
     question: "Đề bài, câu hỏi",
     answers: ["题 (tí)", "句子 (jùzi)"],
-    correct: "题 (tí)"
+    correct: "题 (tí)",
   },
   {
     question: "Xong, hoàn thành",
     answers: ["完 (wán)", "开始 (kāishǐ)"],
-    correct: "完 (wán)"
+    correct: "完 (wán)",
   },
   {
     question: "Câu, bài (lượng từ cho đề)",
     answers: ["道 (dào)", "页 (yè)"],
-    correct: "道 (dào)"
+    correct: "道 (dào)",
   },
   {
     question: "Điểm số, thành tích",
     answers: ["成绩 (chéngjì)", "水平 (shuǐpíng)"],
-    correct: "成绩 (chéngjì)"
+    correct: "成绩 (chéngjì)",
   },
       {
   question: "Bận rộn",
   answers: ["忙 (máng)", "高兴 (gāoxìng)"],
-  correct: "忙 (máng)"
+  correct: "忙 (máng)",
 },
 {
   question: "Dễ dàng",
   answers: ["容易 (róngyì)", "难 (nán)"],
-  correct: "容易 (róngyì)"
+  correct: "容易 (róngyì)",
 },
 {
   question: "Khó khăn",
   answers: ["难 (nán)", "快 (kuài)"],
-  correct: "难 (nán)"
+  correct: "难 (nán)",
 },
 {
   question: "Nhanh chóng",
   answers: ["快 (kuài)", "慢 (màn)"],
-  correct: "快 (kuài)"
+  correct: "快 (kuài)",
 },
 {
   question: "Chậm chạp",
   answers: ["慢 (màn)", "热 (rè)"],
-  correct: "慢 (màn)"
+  correct: "慢 (màn)",
 },
 {
   question: "Nóng (thời tiết)",
   answers: ["热 (rè)", "冷 (lěng)"],
-  correct: "热 (rè)"
+  correct: "热 (rè)",
 },
 {
   question: "Lạnh (thời tiết)",
   answers: ["冷 (lěng)", "热 (rè)"],
-  correct: "冷 (lěng)"
+  correct: "冷 (lěng)",
 },
 {
   question: "Trẻ",
   answers: ["年轻 (niánqīng)", "老 (lǎo)"],
-  correct: "年轻 (niánqīng)"
+  correct: "年轻 (niánqīng)",
 },
 {
   question: "Già",
   answers: ["老 (lǎo)", "小 (xiǎo)"],
-  correct: "老 (lǎo)"
+  correct: "老 (lǎo)",
 },
 {
   question: "Nhỏ",
   answers: ["小 (xiǎo)", "大 (dà)"],
-  correct: "小 (xiǎo)"
+  correct: "小 (xiǎo)",
 },
       {
   question: "To lớn",
   answers: ["大 (dà)", "小 (xiǎo)"],
-  correct: "大 (dà)"
+  correct: "大 (dà)",
 },
 {
   question: "Học sinh",
   answers: ["学生 (xuéshēng)", "老师 (lǎoshī)"],
-  correct: "学生 (xuéshēng)"
+  correct: "学生 (xuéshēng)",
 },
 {
   question: "Giáo viên",
   answers: ["老师 (lǎoshī)", "医生 (yīshēng)"],
-  correct: "老师 (lǎoshī)"
+  correct: "老师 (lǎoshī)",
 },
 {
   question: "Bác sĩ",
   answers: ["医生 (yīshēng)", "护士 (hùshì)"],
-  correct: "医生 (yīshēng)"
+  correct: "医生 (yīshēng)",
 },
 {
   question: "Y tá",
   answers: ["护士 (hùshì)", "司机 (sījī)"],
-  correct: "护士 (hùshì)"
+  correct: "护士 (hùshì)",
 },
 {
   question: "Tài xế",
   answers: ["司机 (sījī)", "工人 (gōngrén)"],
-  correct: "司机 (sījī)"
+  correct: "司机 (sījī)",
 },
 {
   question: "Công nhân",
   answers: ["工人 (gōngrén)", "农民 (nóngmín)"],
-  correct: "工人 (gōngrén)"
+  correct: "工人 (gōngrén)",
 },
 {
   question: "Nông dân",
   answers: ["农民 (nóngmín)", "商人 (shāngrén)"],
-  correct: "农民 (nóngmín)"
+  correct: "农民 (nóngmín)",
 },
 {
   question: "Thương nhân",
   answers: ["商人 (shāngrén)", "老师 (lǎoshī)"],
-  correct: "商人 (shāngrén)"
+  correct: "商人 (shāngrén)",
 },
 {
   question: "Kỹ sư",
   answers: ["工程师 (gōngchéngshī)", "医生 (yīshēng)"],
-  correct: "工程师 (gōngchéngshī)"
+  correct: "工程师 (gōngchéngshī)",
 },
 {
   question: "Người phục vụ",
   answers: ["服务员 (fúwùyuán)", "学生 (xuéshēng)"],
-  correct: "服务员 (fúwùyuán)"
+  correct: "服务员 (fúwùyuán)",
 },
 {
   question: "Cảnh sát",
   answers: ["警察 (jǐngchá)", "医生 (yīshēng)"],
-  correct: "警察 (jǐngchá)"
+  correct: "警察 (jǐngchá)",
 },
 {
   question: "Đầu bếp",
   answers: ["厨师 (chúshī)", "司机 (sījī)"],
-  correct: "厨师 (chúshī)"
+  correct: "厨师 (chúshī)",
 },
 {
   question: "Phi công",
   answers: ["飞行员 (fēixíngyuán)", "工人 (gōngrén)"],
-  correct: "飞行员 (fēixíngyuán)"
+  correct: "飞行员 (fēixíngyuán)",
 },
 {
   question: "Nghệ sĩ",
   answers: ["艺术家 (yìshùjiā)", "学生 (xuéshēng)"],
-  correct: "艺术家 (yìshùjiā)"
+  correct: "艺术家 (yìshùjiā)",
 },
 {
   question: "Ca sĩ",
   answers: ["歌手 (gēshǒu)", "老师 (lǎoshī)"],
-  correct: "歌手 (gēshǒu)"
+  correct: "歌手 (gēshǒu)",
 },
 {
   question: "Diễn viên",
   answers: ["演员 (yǎnyuán)", "护士 (hùshì)"],
-  correct: "演员 (yǎnyuán)"
+  correct: "演员 (yǎnyuán)",
 },
 {
   question: "Nhà văn",
   answers: ["作家 (zuòjiā)", "司机 (sījī)"],
-  correct: "作家 (zuòjiā)"
+  correct: "作家 (zuòjiā)",
 },
 {
   question: "Phóng viên",
   answers: ["记者 (jìzhě)", "老师 (lǎoshī)"],
-  correct: "记者 (jìzhě)"
+  correct: "记者 (jìzhě)",
 },
 {
   question: "Sinh viên",
   answers: ["大学生 (dàxuéshēng)", "工人 (gōngrén)"],
-  correct: "大学生 (dàxuéshēng)"
+  correct: "大学生 (dàxuéshēng)",
 },
 {
   question: "Bạn học",
   answers: ["同学 (tóngxué)", "医生 (yīshēng)"],
-  correct: "同学 (tóngxué)"
+  correct: "同学 (tóngxué)",
 },
 {
   question: "Đồng nghiệp",
   answers: ["同事 (tóngshì)", "老师 (lǎoshī)"],
-  correct: "同事 (tóngshì)"
+  correct: "同事 (tóngshì)",
 },
 {
   question: "Bạn bè",
   answers: ["朋友 (péngyǒu)", "警察 (jǐngchá)"],
-  correct: "朋友 (péngyǒu)"
+  correct: "朋友 (péngyǒu)",
 },
 {
   question: "Người thân",
   answers: ["亲戚 (qīnqi)", "护士 (hùshì)"],
-  correct: "亲戚 (qīnqi)"
+  correct: "亲戚 (qīnqi)",
 },
 {
   question: "Cha",
   answers: ["父亲 (fùqīn)", "母亲 (mǔqīn)"],
-  correct: "父亲 (fùqīn)"
+  correct: "父亲 (fùqīn)",
 },
 {
   question: "Mẹ",
   answers: ["母亲 (mǔqīn)", "学生 (xuéshēng)"],
-  correct: "母亲 (mǔqīn)"
+  correct: "母亲 (mǔqīn)",
 },
 {
   question: "Anh trai",
   answers: ["哥哥 (gēge)", "妹妹 (mèimei)"],
-  correct: "哥哥 (gēge)"
+  correct: "哥哥 (gēge)",
 },
 {
   question: "Em gái",
   answers: ["妹妹 (mèimei)", "弟弟 (dìdi)"],
-  correct: "妹妹 (mèimei)"
+  correct: "妹妹 (mèimei)",
 },
 {
   question: "Em trai",
   answers: ["弟弟 (dìdi)", "姐姐 (jiějie)"],
-  correct: "弟弟 (dìdi)"
+  correct: "弟弟 (dìdi)",
 },
 {
   question: "Chị gái",
   answers: ["姐姐 (jiějie)", "哥哥 (gēge)"],
-  correct: "姐姐 (jiějie)"
+  correct: "姐姐 (jiějie)",
 },
 {
   question: "Ông nội",
   answers: ["爷爷 (yéye)", "奶奶 (nǎinai)"],
-  correct: "爷爷 (yéye)"
+  correct: "爷爷 (yéye)",
 },
 {
   question: "Bà nội",
   answers: ["奶奶 (nǎinai)", "爷爷 (yéye)"],
-  correct: "奶奶 (nǎinai)"
+  correct: "奶奶 (nǎinai)",
 },
 {
   question: "Ông ngoại",
   answers: ["外公 (wàigōng)", "外婆 (wàipó)"],
-  correct: "外公 (wàigōng)"
+  correct: "外公 (wàigōng)",
 },
 {
   question: "Bà ngoại",
   answers: ["外婆 (wàipó)", "外公 (wàigōng)"],
-  correct: "外婆 (wàipó)"
+  correct: "外婆 (wàipó)",
 },
 {
   question: "Con trai",
-  answers: ["儿子 (érzi)", "女儿 (nǚ’ér)"],
-  correct: "儿子 (érzi)"
+  answers: ["儿子 (érzi)", "女儿 (nǚ ér)"],
+  correct: "儿子 (érzi)",
 },
 {
   question: "Con gái",
-  answers: ["女儿 (nǚ’ér)", "儿子 (érzi)"],
-  correct: "女儿 (nǚ’ér)"
+  answers: ["女儿 (nǚ ér)", "儿子 (érzi)"],
+  correct: "女儿 (nǚ ér)",
 },
 {
   question: "Vợ",
   answers: ["妻子 (qīzi)", "丈夫 (zhàngfu)"],
-  correct: "妻子 (qīzi)"
+  correct: "妻子 (qīzi)",
 },
 {
   question: "Chồng",
   answers: ["丈夫 (zhàngfu)", "妻子 (qīzi)"],
-  correct: "丈夫 (zhàngfu)"
+  correct: "丈夫 (zhàngfu)",
 },
 {
   question: "Bạn gái",
   answers: ["女朋友 (nǚ péngyǒu)", "男朋友 (nán péngyǒu)"],
-  correct: "女朋友 (nǚ péngyǒu)"
+  correct: "女朋友 (nǚ péngyǒu)",
 },
 {
   question: "Bạn trai",
   answers: ["男朋友 (nán péngyǒu)", "女朋友 (nǚ péngyǒu)"],
-  correct: "男朋友 (nán péngyǒu)"
+  correct: "男朋友 (nán péngyǒu)",
 },
         {
     question: "Tiêu hóa",
     answers: ["消化 (xiāohuà)", "考试 (kǎoshì)"],
-    correct: "消化 (xiāohuà)"
+    correct: "消化 (xiāohuà)",
   },
   {
     question: "Kê đơn thuốc",
     answers: ["开药 (kāi yào)", "回信 (huíxìn)"],
-    correct: "开药 (kāi yào)"
+    correct: "开药 (kāi yào)",
   },
   {
     question: "Tiêm, chích thuốc",
     answers: ["打针 (dǎzhēn)", "练 (liàn)"],
-    correct: "打针 (dǎzhēn)"
+    correct: "打针 (dǎzhēn)",
   },
   {
     question: "Khóc",
     answers: ["哭 (kū)", "笑 (xiào)"],
-    correct: "哭 (kū)"
+    correct: "哭 (kū)",
   },
   {
     question: "Cô đơn, hiu quạnh",
     answers: ["寂寞 (jìmò)", "方便 (fāngbiàn)"],
-    correct: "寂寞 (jìmò)"
+    correct: "寂寞 (jìmò)",
   },
   {
     question: "Buồn, đau lòng",
     answers: ["难过 (nánguò)", "满意 (mǎnyì)"],
-    correct: "难过 (nánguò)"
+    correct: "难过 (nánguò)",
   },
   {
     question: "Hội trường",
     answers: ["礼堂 (lǐtáng)", "厨房 (chúfáng)"],
-    correct: "礼堂 (lǐtáng)"
+    correct: "礼堂 (lǐtáng)",
   },
   {
     question: "Vũ hội, dạ vũ",
     answers: ["舞会 (wǔhuì)", "比赛 (bǐsài)"],
-    correct: "舞会 (wǔhuì)"
+    correct: "舞会 (wǔhuì)",
   },
   {
     question: "Nhảy múa, khiêu vũ",
     answers: ["跳舞 (tiàowǔ)", "跑步 (pǎobù)"],
-    correct: "跳舞 (tiàowǔ)"
+    correct: "跳舞 (tiàowǔ)",
   },
   {
     question: "Tắc đường",
     answers: ["堵车 (dǔchē)", "输 (shū)"],
-    correct: "堵车 (dǔchē)"
+    correct: "堵车 (dǔchē)",
   },
   {
     question: "Vội, gấp",
     answers: ["赶 (gǎn)", "练 (liàn)"],
-    correct: "赶 (gǎn)"
+    correct: "赶 (gǎn)",
   },
   {
     question: "Nếu",
     answers: ["要是 (yàoshi)", "哪里 (nǎli)"],
-    correct: "要是 (yàoshi)"
+    correct: "要是 (yàoshi)",
   },
   {
     question: "Tiền thuê nhà",
     answers: ["房租 (fángzū)", "牛奶 (niúnǎi)"],
-    correct: "房租 (fángzū)"
+    correct: "房租 (fángzū)",
   },
   {
     question: "Tuy rằng",
     answers: ["虽然 (suīrán)", "因为 (yīnwèi)"],
-    correct: "虽然 (suīrán)"
+    correct: "虽然 (suīrán)",
   },
   {
     question: "Sông",
     answers: ["河 (hé)", "鱼 (yú)"],
-    correct: "河 (hé)"
+    correct: "河 (hé)",
   },
   {
     question: "Giao thông",
     answers: ["交通 (jiāotōng)", "运动 (yùndòng)"],
-    correct: "交通 (jiāotōng)"
+    correct: "交通 (jiāotōng)",
   },
   {
     question: "Thuận tiện",
     answers: ["方便 (fāngbiàn)", "干净 (gānjìng)"],
-    correct: "方便 (fāngbiàn)"
+    correct: "方便 (fāngbiàn)",
   },
   {
     question: "Trạm xe, ga",
     answers: ["车站 (chēzhàn)", "层 (céng)"],
-    correct: "车站 (chēzhàn)"
+    correct: "车站 (chēzhàn)",
   },
   {
     question: "Tàu điện ngầm",
     answers: ["地铁 (dìtiě)", "楼 (lóu)"],
-    correct: "地铁 (dìtiě)"
+    correct: "地铁 (dìtiě)",
   },
   {
     question: "Gần, lân cận",
     answers: ["附近 (fùjìn)", "里面 (lǐmiàn)"],
-    correct: "附近 (fùjìn)"
+    correct: "附近 (fùjìn)",
   },
   {
     question: "Nhà thi đấu thể thao",
     answers: ["体育馆 (tǐyùguǎn)", "图书馆 (túshūguǎn)"],
-    correct: "体育馆 (tǐyùguǎn)"
+    correct: "体育馆 (tǐyùguǎn)",
   },
   {
     question: "Kỳ thi",
     answers: ["考试 (kǎoshì)", "检查 (jiǎnchá)"],
-    correct: "考试 (kǎoshì)"
+    correct: "考试 (kǎoshì)",
   },
   {
     question: "Đề bài, câu hỏi",
     answers: ["题 (tí)", "词 (cí)"],
-    correct: "题 (tí)"
+    correct: "题 (tí)",
   },
   {
     question: "Thành tích, điểm số",
     answers: ["成绩 (chéngjì)", "机会 (jīhuì)"],
-    correct: "成绩 (chéngjì)"
+    correct: "成绩 (chéngjì)",
   },
   {
     question: "Câu",
     answers: ["句子 (jùzi)", "页 (yè)"],
-    correct: "句子 (jùzi)"
+    correct: "句子 (jùzi)",
   },
   {
     question: "Trả lời thư",
     answers: ["回信 (huíxìn)", "短信 (duǎnxìn)"],
-    correct: "回信 (huíxìn)"
+    correct: "回信 (huíxìn)",
   },
   {
     question: "Câu chuyện",
     answers: ["故事 (gùshi)", "情况 (qíngkuàng)"],
-    correct: "故事 (gùshi)"
+    correct: "故事 (gùshi)",
   },
   {
     question: "Thú vị",
     answers: ["有意思 (yǒuyìsi)", "满意 (mǎnyì)"],
-    correct: "有意思 (yǒuyìsi)"
+    correct: "有意思 (yǒuyìsi)",
   },
   {
     question: "Trang (sách)",
     answers: ["页 (yè)", "面 (miàn)"],
-    correct: "页 (yè)"
+    correct: "页 (yè)",
   },
   {
     question: "Hội thoại",
     answers: ["会话 (huìhuà)", "对话 (duìhuà)"],
-    correct: "会话 (huìhuà)"
+    correct: "会话 (huìhuà)",
   },
   {
     question: "Đọc, học",
     answers: ["念 (niàn)", "记 (jì)"],
-    correct: "念 (niàn)"
+    correct: "念 (niàn)",
   },
   {
     question: "Trả lời",
     answers: ["答 (dá)", "问 (wèn)"],
-    correct: "答 (dá)"
+    correct: "答 (dá)",
   },
   {
     question: "Biện pháp, cách làm",
     answers: ["办法 (bànfǎ)", "机会 (jīhuì)"],
-    correct: "办法 (bànfǎ)"
+    correct: "办法 (bànfǎ)",
   },
   {
     question: "Nghe thấy",
     answers: ["听见 (tīngjiàn)", "看见 (kànjiàn)"],
-    correct: "听见 (tīngjiàn)"
+    correct: "听见 (tīngjiàn)",
   },
   {
     question: "Mở ra",
     answers: ["打开 (dǎkāi)", "开机 (kāijī)"],
-    correct: "打开 (dǎkāi)"
+    correct: "打开 (dǎkāi)",
   },
   {
     question: "Bài tập",
     answers: ["作业 (zuòyè)", "功课 (gōngkè)"],
-    correct: "作业 (zuòyè)"
+    correct: "作业 (zuòyè)",
   },
   {
     question: "Quen, thuộc, chín",
     answers: ["熟 (shú)", "生 (shēng)"],
-    correct: "熟 (shú)"
+    correct: "熟 (shú)",
   },
   {
     question: "Giờ (đồng hồ, thời gian)",
     answers: ["钟头 (zhōngtóu)", "时候 (shíhou)"],
-    correct: "钟头 (zhōngtóu)"
+    correct: "钟头 (zhōngtóu)",
   },
   {
     question: "Hiệu quả",
     answers: ["效果 (xiàoguǒ)", "成绩 (chéngjì)"],
-    correct: "效果 (xiàoguǒ)"
+    correct: "效果 (xiàoguǒ)",
   },
         {
     question: "Danh từ riêng",
     answers: ["专名 (zhuānmíng)", "普通 (pǔtōng)"],
-    correct: "专名 (zhuānmíng)"
+    correct: "专名 (zhuānmíng)",
   },
   {
     question: "Anna (tên riêng)",
     answers: ["安娜 (Ānnà)", "田中 (Tiánzhōng)"],
-    correct: "安娜 (Ānnà)"
+    correct: "安娜 (Ānnà)",
   },
   {
     question: "Cuộc sống",
     answers: ["生活 (shēnghuó)", "情况 (qíngkuàng)"],
-    correct: "生活 (shēnghuó)"
+    correct: "生活 (shēnghuó)",
   },
   {
     question: "Gần như, xấp xỉ",
     answers: ["差不多 (chàbuduō)", "一般 (yìbān)"],
-    correct: "差不多 (chàbuduō)"
+    correct: "差不多 (chàbuduō)",
   },
   {
     question: "Thói quen",
     answers: ["习惯 (xíguàn)", "兴趣 (xìngqù)"],
-    correct: "习惯 (xíguàn)"
+    correct: "习惯 (xíguàn)",
   },
   {
     question: "Khí hậu",
     answers: ["气候 (qìhòu)", "天气 (tiānqì)"],
-    correct: "气候 (qìhòu)"
+    correct: "气候 (qìhòu)",
   },
   {
     question: "Khô, hanh",
     answers: ["干燥 (gānzào)", "干净 (gānjìng)"],
-    correct: "干燥 (gānzào)"
+    correct: "干燥 (gānzào)",
   },
   {
     question: "Sạch sẽ",
     answers: ["干净 (gānjìng)", "清楚 (qīngchu)"],
-    correct: "干净 (gānjìng)"
+    correct: "干净 (gānjìng)",
   },
   {
     question: "Món ăn, rau",
     answers: ["菜 (cài)", "饭 (fàn)"],
-    correct: "菜 (cài)"
+    correct: "菜 (cài)",
   },
   {
     question: "Béo ngậy, dầu mỡ",
     answers: ["油腻 (yóunì)", "甜 (tián)"],
-    correct: "油腻 (yóunì)"
+    correct: "油腻 (yóunì)",
   },
   {
     question: "Sữa bò",
     answers: ["牛奶 (niúnǎi)", "茶 (chá)"],
-    correct: "牛奶 (niúnǎi)"
+    correct: "牛奶 (niúnǎi)",
   },
   {
     question: "Nhưng mà, chỉ",
     answers: ["不过 (búguò)", "可是 (kěshì)"],
-    correct: "不过 (búguò)"
+    correct: "不过 (búguò)",
   },
   {
     question: "Giờ nghỉ giữa tiết",
     answers: ["课间 (kèjiān)", "中间 (zhōngjiān)"],
-    correct: "课间 (kèjiān)"
+    correct: "课间 (kèjiān)",
   },
   {
     question: "Miếng, cục, đồng (tiền)",
     answers: ["块 (kuài)", "元 (yuán)"],
-    correct: "块 (kuài)"
+    correct: "块 (kuài)",
   },
   {
     question: "Từ trước đến nay",
     answers: ["从来 (cónglái)", "一直 (yìzhí)"],
-    correct: "从来 (cónglái)"
+    correct: "从来 (cónglái)",
   },
   {
     question: "Đồ ăn nhẹ",
     answers: ["点心 (diǎnxīn)", "水果 (shuǐguǒ)"],
-    correct: "点心 (diǎnxīn)"
+    correct: "点心 (diǎnxīn)",
   },
   {
     question: "Giấc ngủ trưa",
     answers: ["午觉 (wǔjiào)", "睡觉 (shuìjiào)"],
-    correct: "午觉 (wǔjiào)"
+    correct: "午觉 (wǔjiào)",
   },
   {
     question: "Bơi",
     answers: ["游泳 (yóuyǒng)", "散步 (sànbù)"],
-    correct: "游泳 (yóuyǒng)"
+    correct: "游泳 (yóuyǒng)",
   },
   {
     question: "Đi dạo",
     answers: ["散步 (sànbù)", "跑步 (pǎobù)"],
-    correct: "散步 (sànbù)"
+    correct: "散步 (sànbù)",
   },
   {
     question: "Bài vở, môn học",
     answers: ["功课 (gōngkè)", "作业 (zuòyè)"],
-    correct: "功课 (gōngkè)"
+    correct: "功课 (gōngkè)",
   },
   {
     question: "Nhớ kỹ",
     answers: ["记住 (jìzhù)", "忘记 (wàngjì)"],
-    correct: "记住 (jìzhù)"
+    correct: "记住 (jìzhù)",
   },
   {
     question: "Ghi, nhớ",
     answers: ["记 (jì)", "念 (niàn)"],
-    correct: "记 (jì)"
+    correct: "记 (jì)",
   },
   {
     question: "Bình thường",
     answers: ["一般 (yìbān)", "特别 (tèbié)"],
-    correct: "一般 (yìbān)"
+    correct: "一般 (yìbān)",
   },
   {
     question: "Cảm ơn",
     answers: ["感谢 (gǎnxiè)", "谢谢 (xièxie)"],
-    correct: "感谢 (gǎnxiè)"
+    correct: "感谢 (gǎnxiè)",
   },
   {
     question: "Cha mẹ",
     answers: ["父母 (fùmǔ)", "朋友 (péngyǒu)"],
-    correct: "父母 (fùmǔ)"
+    correct: "父母 (fùmǔ)",
   },
   {
     question: "Cơ hội",
     answers: ["机会 (jīhuì)", "情况 (qíngkuàng)"],
-    correct: "机会 (jīhuì)"
+    correct: "机会 (jīhuì)",
   },
   {
     question: "Thì ra, vốn dĩ",
     answers: ["原来 (yuánlái)", "后来 (hòulái)"],
-    correct: "原来 (yuánlái)"
+    correct: "原来 (yuánlái)",
   },
   {
     question: "Kéo dài",
     answers: ["延长 (yáncháng)", "缩短 (suōduǎn)"],
-    correct: "延长 (yáncháng)"
+    correct: "延长 (yáncháng)",
   },
   {
     question: "Luyện tập",
     answers: ["练 (liàn)", "学 (xué)"],
-    correct: "练 (liàn)"
+    correct: "练 (liàn)",
   },
   {
     question: "Khí công",
     answers: ["气功 (qìgōng)", "太极拳 (tàijíquán)"],
-    correct: "气功 (qìgōng)"
+    correct: "气功 (qìgōng)",
   },
   {
     question: "Tốt",
     answers: ["好 (hǎo)", "坏 (huài)"],
-    correct: "好 (hǎo)"
+    correct: "好 (hǎo)",
   },
   {
     question: "Không nhất định",
     answers: ["不一定 (bù yídìng)", "一定 (yídìng)"],
-    correct: "不一定 (bù yídìng)"
+    correct: "不一定 (bù yídìng)",
   },
   {
     question: "Khá, rất",
     answers: ["挺 (tǐng)", "不太 (bù tài)"],
-    correct: "挺 (tǐng)"
+    correct: "挺 (tǐng)",
   },
   {
     question: "Lợi ích",
     answers: ["好处 (hǎochu)", "坏处 (huàichu)"],
-    correct: "好处 (hǎochu)"
+    correct: "好处 (hǎochu)",
   },
   {
     question: "Tác hại",
     answers: ["坏处 (huàichu)", "好处 (hǎochu)"],
-    correct: "坏处 (huàichu)"
+    correct: "坏处 (huàichu)",
   },
   {
     question: "Bệnh mãn tính",
     answers: ["慢性病 (mànxìngbìng)", "感冒 (gǎnmào)"],
-    correct: "慢性病 (mànxìngbìng)"
+    correct: "慢性病 (mànxìngbìng)",
   },
   {
     question: "Cao huyết áp",
     answers: ["高血压 (gāoxuèyā)", "低血压 (dīxuèyā)"],
-    correct: "高血压 (gāoxuèyā)"
+    correct: "高血压 (gāoxuèyā)",
   },
   {
     question: "Mất ngủ",
     answers: ["失眠 (shīmián)", "睡觉 (shuìjiào)"],
-    correct: "失眠 (shīmián)"
+    correct: "失眠 (shīmián)",
   },
   {
     question: "Phải",
     answers: ["必须 (bìxū)", "可以 (kěyǐ)"],
-    correct: "必须 (bìxū)"
+    correct: "必须 (bìxū)",
   },
   {
     question: "Cá lớn",
     answers: ["大鱼 (dàyú)", "小鱼 (xiǎoyú)"],
-    correct: "大鱼 (dàyú)"
+    correct: "大鱼 (dàyú)",
   },
   {
     question: "Phơi nắng, chiếu nắng",
     answers: ["晒 (shài)", "冷 (lěng)"],
     correct: "晒 (shài)"
-  },
-];
+  }
+  ]
+
 export default level2Questions;
-
-
