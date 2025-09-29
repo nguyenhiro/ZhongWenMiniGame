@@ -1320,7 +1320,7 @@ const level2Questions = [
     correct: "从来 (cónglái)",
   },
   {
-    question: "Đồ ăn nhẹ",
+    question: "Đồ ăn nhẹ , điểm tâm",
     answers: ["点心 (diǎnxīn)", "牛肉 (niúròu)"],
     correct: "点心 (diǎnxīn)",
   },
@@ -2355,7 +2355,7 @@ const level2Questions = [
     correct: "从来 (cónglái)",
   },
   {
-    question: "Đồ ăn nhẹ",
+    question: "Đồ ăn nhẹ, điểm tâm",
     answers: ["点心 (diǎnxīn)", "水果 (shuǐguǒ)"],
     correct: "点心 (diǎnxīn)",
   },
@@ -2487,6 +2487,7 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
 
