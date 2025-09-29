@@ -945,7 +945,7 @@ const level2Questions = [
     correct: "考试 (kǎoshì)",
   },
   {
-    question: "Thể thao",
+    question: "Thể thao, thể dục",
     answers: ["体育 (tǐyù)", "客户 (kèhù)"],
     correct: "体育 (tǐyù)",
   },
@@ -2487,6 +2487,7 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
 
