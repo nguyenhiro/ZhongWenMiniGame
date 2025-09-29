@@ -595,7 +595,7 @@ const level2Questions = [
         correct: "踢 (tī)",
     },
     {
-        question: "Trận đấu, thi đấu",
+        question: "Trận đấu, thi đấu, so đấu",
         answers: ["比赛 (bǐsài)", "练习 (liànxí)"],
         correct: "比赛 (bǐsài)",
     },
@@ -810,7 +810,7 @@ const level2Questions = [
         correct: "成绩 (chéngjì)",
     },
     {
-        question: "Câu",
+        question: "Câu (1 câu nói)",
         answers: ["句子 (jùzi)", "词 (cí)"],
         correct: "句子 (jùzi)",
     },
@@ -1100,7 +1100,7 @@ const level2Questions = [
     correct: "考试 (kǎoshì)",
   },
   {
-    question: "Câu",
+    question: "Câu (1 câu nói)",
     answers: ["句子 (jùzi)", "河 (hé)"],
     correct: "句子 (jùzi)",
   },
@@ -1400,7 +1400,7 @@ const level2Questions = [
     correct: "不一定 (bù yídìng)",
   },
   {
-    question: "Giờ (thời gian)",
+    question: "Giờ (đầu giờ)",
     answers: ["钟头 (zhōngtóu)", "分钟 (fēnzhōng)"],
     correct: "钟头 (zhōngtóu)",
   },
@@ -1440,7 +1440,7 @@ const level2Questions = [
     correct: "失眠 (shīmián)",
   },
   {
-    question: "Phải",
+    question: "Phải, buộc phải làm",
     answers: ["必须 (bìxū)", "可以 (kěyǐ)"],
     correct: "必须 (bìxū)",
   },
@@ -1525,7 +1525,7 @@ const level2Questions = [
     correct: "篮球 (lánqiú)",
   },
   {
-    question: "Trận đấu, thi đấu",
+    question: "Trận đấu, thi đấu, so đấu",
     answers: ["比赛 (bǐsài)", "上课 (shàngkè)"],
     correct: "比赛 (bǐsài)",
   },
@@ -1575,7 +1575,7 @@ const level2Questions = [
     correct: "牛肉 (niúròu)",
   },
   {
-    question: "Xét nghiệm",
+    question: "Xét nghiệm (thí nghiệm)",
     answers: ["化验 (huàyàn)", "检查 (jiǎnchá)"],
     correct: "化验 (huàyàn)",
   },
@@ -2205,7 +2205,7 @@ const level2Questions = [
     correct: "成绩 (chéngjì)",
   },
   {
-    question: "Câu",
+    question: "Câu (1 câu nói)",
     answers: ["句子 (jùzi)", "页 (yè)"],
     correct: "句子 (jùzi)",
   },
@@ -2487,6 +2487,7 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
 
