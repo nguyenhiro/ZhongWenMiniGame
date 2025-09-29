@@ -325,22 +325,22 @@ const level1Questions = [
         correct: "雪 (xuě)",
     },
     {
-        question: "Tiếng Anh",
+        question: "Ngôn ngữ Anh",
         answers: ["英语 (Yīngyǔ)", "德语 (Déyǔ)"],
         correct: "英语 (Yīngyǔ)",
     },
     {
-        question: "Tiếng Pháp",
+        question: "Ngôn ngữ Pháp",
         answers: ["阿拉伯语 (Ālābóyǔ)", "法语 (Fǎyǔ)"],
         correct: "法语 (Fǎyǔ)",
     },
     {
-        question: "Tiếng Nga",
+        question: "Ngôn ngữ Nga",
         answers: ["俄语 (Éyǔ)", "韩国语 (Hánguóyǔ)"],
         correct: "俄语 (Éyǔ)",
     },
     {
-        question: "Tiếng Tây Ban Nha",
+        question: "Ngôn ngữ Tây Ban Nha",
         answers: ["日语 (Rìyǔ)", "西班牙语 (Xībānyáyǔ)"],
         correct: "西班牙语 (Xībānyáyǔ)",
     },
@@ -685,7 +685,7 @@ const level1Questions = [
         correct: "要 (yào)",
     },
     {
-        question: "Bát",
+        question: "Bát, chén",
         answers: ["碗 (wǎn)", "鸡蛋 (jīdàn)"],
         correct: "碗 (wǎn)",
     },
@@ -710,7 +710,7 @@ const level1Questions = [
         correct: "那些 (nàxiē)",
     },
     {
-        question: "Há cảo",
+        question: "Há cảo, sủi cảo",
         answers: ["饺子 (jiǎozi)", "包子 (bāozi)"],
         correct: "饺子 (jiǎozi)",
     },
@@ -1186,3 +1186,4 @@ const level1Questions = [
     },
 ];
 export default level1Questions;
+
