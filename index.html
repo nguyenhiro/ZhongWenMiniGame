@@ -154,6 +154,39 @@
         #nextLevel { background-color: #2ecc71; }
         .level-stats { margin-top: 15px; font-size: 1.1em; color: #555; text-align: left; border-top: 1px solid #ccc; padding-top: 10px; }
         .level-stats p { margin: 5px 0; }
+
+        /* ======================== */
+        /* CSS MỚI: Cho Dropdown Level */
+        /* ======================== */
+        #level-dropdown {
+            background-color: #333; /* Nền tối cho dropdown */
+            color: #fff; /* Chữ trắng */
+            border: 1px solid #555;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            margin: 10px;
+            cursor: pointer;
+            -webkit-appearance: none; /* Xóa style mặc định của browser cho select */
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C114.7L154.5%2C247.3c-2.4%2C2.4-5.5%2C3.6-8.7%2C3.6c-3.2%2C0-6.3-1.2-8.7-3.6L5.4%2C114.7c-4.8-4.8-4.8-12.5%2C0-17.3c4.8-4.8%2C12.5-4.8%2C17.3%2C0L145.8%2C212l123.1-123.1c4.8-4.8%2C12.5-4.8%2C17.3%2C0C291.8%2C102.2%2C291.8%2C109.9%2C287%2C114.7z%22%2F%3E%3C%2Fsvg%3E'); /* Thêm mũi tên trắng */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+        }
+
+        #level-dropdown option {
+            background-color: #333; /* Nền tối cho từng option */
+            color: #fff; /* Chữ trắng cho từng option */
+        }
+
+        /* Định dạng cho dropdown khi focus/hover */
+        #level-dropdown:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+        }
     </style>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EE00XE0TZ"></script>
@@ -179,14 +212,20 @@
                 <button class="btn btn-start" id="startGameBtn">Bắt Đầu Chơi</button>
                 <button class="btn btn-how-to" id="showInstructionsBtn">Hướng Dẫn Chơi</button>
             </div>
+
+            <div id="level-selection-container" style="display:none; margin-top: 20px;">
+                <h3>Chọn cấp độ để chơi:</h3>
+                <select id="level-dropdown" class="btn"></select>
+                <button class="btn btn-start" onclick="startSelectedLevel()">Chơi</button>
+            </div>
         </main>
         <footer>
             <p>&copy; 28092025 Trò Chơi Zhong Wen. Tác giả Nguyễn Hoài Nam.</p>
             <p>&copy; Thông tin donate cho tác giả STK Vietcombank "1034414365" </p>
             <div class="donation-qr">
-        <p>Nếu bạn yêu thích trò chơi, hãy chia sẻ để có thêm nhiều bạn bè cùng tham gia nhé!</p>
-            <p>Cảm ơn bạn rất nhiều! 🙏</p>
-    </div>
+                <p>Nếu bạn yêu thích trò chơi, hãy chia sẻ để có thêm nhiều bạn bè cùng tham gia nhé!</p>
+                <p>Cảm ơn bạn rất nhiều! 🙏</p>
+            </div>
         </footer>
     </div>
     <div id="instructionsModal" class="instructions-modal">
@@ -223,25 +262,22 @@
     </div>
 
     <script type="module">
-        import { questionsByLevel } from './questions.js';
-
-        // DOM Elements
         const landingPage = document.getElementById('landing-page');
         const gamePage = document.getElementById('game-page');
         const instructionsModal = document.getElementById('instructionsModal');
         const startGameBtn = document.getElementById('startGameBtn');
         const showInstructionsBtn = document.getElementById('showInstructionsBtn');
         const hideInstructionsBtn = document.getElementById('hideInstructionsBtn');
+        const levelSelectionContainer = document.getElementById('level-selection-container');
+        const levelDropdown = document.getElementById('level-dropdown');
         
-        // Các biến và logic game cũ của bạn (không thay đổi)
         let currentLevel = 1;
-        const maxLevel = 10;
+        const maxLevel = 10; // Đặt số cấp độ tối đa của bạn tại đây
         let currentQuestionIndex = 0;
         let score = 0;
         let levelTime = 0;
         let timerId;
         let currentQuestions;
-        let allLevelsStats = {};
         
         const questionElement = document.getElementById('question');
         const answerButtonsElement = document.querySelector('.answers');
@@ -251,13 +287,12 @@
         const resultModal = document.getElementById('resultModal');
         const resultModalContent = document.getElementById('resultModalContent');
 
-        // Hàm chuyển đổi giữa các trang
         function showGamePage() {
-          landingPage.style.display = 'none';
-          gamePage.style.display = 'block';
-          document.body.style.backgroundColor = '#f0f0f0';
-          document.body.style.backgroundImage = 'none';
-          document.body.style.color = '#333';
+            landingPage.style.display = 'none';
+            gamePage.style.display = 'block';
+            document.body.style.backgroundColor = '#f0f0f0';
+            document.body.style.backgroundImage = 'none';
+            document.body.style.color = '#333';
         }
 
         function showLandingPage() {
@@ -270,14 +305,28 @@
           document.body.style.color = '#fff';
         }
 
-        function startGame() {
-            showGamePage();
-            const storedStats = localStorage.getItem('gameStats');
-            if (storedStats) {
-                allLevelsStats = JSON.parse(storedStats);
+        function showLevelSelection() {
+            // Ẩn các nút cũ
+            document.querySelector('.buttons').style.display = 'none';
+            // Hiển thị container chọn level
+            levelSelectionContainer.style.display = 'block';
+            // Xóa các option cũ trước khi tạo lại (đảm bảo không bị trùng lặp khi quay lại)
+            levelDropdown.innerHTML = ''; 
+            // Tự động tạo các option cho dropdown
+            for (let i = 1; i <= maxLevel; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `Level ${i}`;
+                levelDropdown.appendChild(option);
             }
-            startLevel(1);
         }
+
+        window.startSelectedLevel = function() {
+            const selectedLevel = parseInt(levelDropdown.value);
+            if (selectedLevel) {
+                loadLevel(selectedLevel);
+            }
+        };
 
         function showInstructions() {
             instructionsModal.style.display = 'flex';
@@ -302,9 +351,9 @@
             timerElement.textContent = "0s";
         }
 
-        function startLevel(level) {
+        function startLevel(level, questionsData) {
             currentLevel = level;
-            currentQuestions = questionsByLevel[currentLevel];
+            currentQuestions = questionsData;
             currentQuestionIndex = 0;
             score = 0;
             resetTimer();
@@ -312,6 +361,18 @@
             showQuestion();
             resultModal.style.display = 'none';
         }
+
+        window.loadLevel = async function(levelNumber) {
+            try {
+                const levelModule = await import(`./levels/level${levelNumber}.js`);
+                const questionsData = levelModule.default;
+                showGamePage();
+                startLevel(levelNumber, questionsData);
+            } catch (error) {
+                console.error("Failed to load level:", error);
+                alert("Lỗi: Không thể tải màn chơi này. Vui lòng kiểm tra lại đường dẫn file hoặc tạo file level tương ứng.");
+            }
+        };
 
         function showQuestion() {
             if (currentQuestionIndex >= currentQuestions.length) {
@@ -364,7 +425,7 @@
                     score++;
                 } else {
                     alert(`Đáp án sai! Bắt đầu lại Level ${currentLevel}.`);
-                    startLevel(currentLevel);
+                    loadLevel(currentLevel);
                     return;
                 }
                 showQuestion();
@@ -373,25 +434,20 @@
 
         function endLevel() {
             clearInterval(timerId);
-            allLevelsStats[currentLevel] = {
-                time: levelTime,
-                score: score
-            };
-            localStorage.setItem('gameStats', JSON.stringify(allLevelsStats));
+            const levelStatsKey = `level-${currentLevel}-stats`;
+            const storedLevelStats = JSON.parse(localStorage.getItem(levelStatsKey)) || { time: Infinity };
+
+            if (levelTime < storedLevelStats.time) {
+                localStorage.setItem(levelStatsKey, JSON.stringify({ time: levelTime, score: score }));
+            }
+
             let modalContentHtml = `
                 <h2>Chúc mừng bạn đã hoàn thành Level ${currentLevel}!</h2>
                 <p>Điểm: ${score}/${currentQuestions.length}</p>
                 <p>Thời gian hoàn thành level: ${levelTime} giây</p>
+                <p>Thời gian tốt nhất: ${storedLevelStats.time === Infinity ? 'Chưa có' : storedLevelStats.time + ' giây'}</p>
                 <button id="replayLevel">Chơi lại Level ${currentLevel}</button>
             `;
-            let statsHtml = '<div class="level-stats"><h3>Thành tích đã đạt</h3>';
-            for (let i = 1; i <= currentLevel; i++) {
-                if (allLevelsStats[i]) {
-                    statsHtml += `<p>Level ${i}: Hoàn thành trong **${allLevelsStats[i].time}s** với ${allLevelsStats[i].score}/${questionsByLevel[i].length} điểm</p>`;
-                }
-            }
-            statsHtml += '</div>';
-            modalContentHtml += statsHtml;
             if (currentLevel < maxLevel) {
                 modalContentHtml += `<button id="nextLevel">Tiếp tục Level ${currentLevel + 1}</button>`;
             } else {
@@ -400,11 +456,11 @@
             resultModalContent.innerHTML = modalContentHtml;
             resultModal.style.display = 'flex';
             document.getElementById("replayLevel").onclick = () => {
-                startLevel(currentLevel);
+                loadLevel(currentLevel);
             };
             if (currentLevel < maxLevel) {
                 document.getElementById("nextLevel").onclick = () => {
-                    startLevel(currentLevel + 1);
+                    loadLevel(currentLevel + 1);
                 };
             }
         }
@@ -416,15 +472,12 @@
             }
         }
 
-        // Đính kèm các event listener cho các nút
-        startGameBtn.addEventListener('click', startGame);
+        // Gắn sự kiện cho nút "Bắt Đầu Chơi"
+        startGameBtn.addEventListener('click', showLevelSelection);
         showInstructionsBtn.addEventListener('click', showInstructions);
         hideInstructionsBtn.addEventListener('click', hideInstructions);
-
-        // Bắt đầu với trang landing khi trang tải
+        
         document.addEventListener('DOMContentLoaded', showLandingPage);
     </script>
 </body>
 </html>
-
-
