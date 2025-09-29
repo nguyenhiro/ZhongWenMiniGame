@@ -2487,6 +2487,7 @@ const level2Questions = [
     question: "Phơi nắng, chiếu nắng",
     answers: ["晒 (shài)", "冷 (lěng)"],
     correct: "晒 (shài)"
-  }
+  },
 ];
 export default level2Questions;
+
