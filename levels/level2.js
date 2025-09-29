@@ -820,7 +820,7 @@ const level2Questions = [
         correct: "干什么 (gàn shénme)",
     },
     {
-        question: "Làm",
+        question: "Làm (bao quát, văn nói)",
         answers: ["干 (gàn)", "作 (zuò)"],
         correct: "干 (gàn)",
     },
@@ -2487,6 +2487,7 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
 
 
 
