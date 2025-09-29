@@ -50,7 +50,7 @@ const level2Questions = [
         correct: "上网 (shàngwǎng)",
     },
   {
-        question: "Áo lông vũ, áo phao",
+        question: "Áo lông vũ, áo phao lông vũ",
         answers: ["羽绒服 (yǔróngfú)", "外套 (wàitào)"],
         correct: "羽绒服 (yǔróngfú)",
     },
@@ -165,7 +165,7 @@ const level2Questions = [
         correct: "大家 (dàjiā)",
     },
     {
-        question: "Nói chuyện, bàn bạc",
+        question: "Nói chuyện, bàn bạc, thảo luận, đối thoại",
         answers: ["谈 (tán)", "说 (shuō)"],
         correct: "谈 (tán)",
     },
@@ -215,7 +215,7 @@ const level2Questions = [
         correct: "下课 (xiàkè)",
     },
     {
-        question: "Cảm thấy",
+        question: "Cảm thấy (không phải cảm xúc)",
         answers: ["感到 (gǎndào)", "觉得 (juéde)"],
         correct: "感到 (gǎndào)",
     },
@@ -445,7 +445,7 @@ const level2Questions = [
         correct: "看 (kàn)",
     },
     {
-        question: "Vì, cho",
+        question: "Vì, cho, thay, để",
         answers: ["为 (wèi)", "和 (hé)"],
         correct: "为 (wèi)",
     },
@@ -2487,3 +2487,4 @@ const level2Questions = [
   ]
 
 export default level2Questions;
+
