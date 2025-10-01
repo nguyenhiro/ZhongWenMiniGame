@@ -28,6 +28,16 @@ import level27Questions from './levels/level27.js';
 import level28Questions from './levels/level28.js';
 import level29Questions from './levels/level29.js';
 import level30Questions from './levels/level30.js';
+import level31Questions from './levels/level31.js';
+import level32Questions from './levels/level32.js';
+import level33Questions from './levels/level33.js';
+import level34Questions from './levels/level34.js';
+import level35Questions from './levels/level35.js';
+import level36Questions from './levels/level36.js';
+import level37Questions from './levels/level37.js';
+import level38Questions from './levels/level38.js';
+import level39Questions from './levels/level39.js';
+import level40Questions from './levels/level40.js';
 
 const questionsByLevel = {
   1: level1Questions,
@@ -60,6 +70,16 @@ const questionsByLevel = {
   28: level28Questions,
   29: level29Questions,
   30: level30Questions,
+  31: level31Questions,
+  32: level32Questions,
+  33: level33Questions,
+  34: level34Questions,
+  35: level35Questions,
+  36: level36Questions,
+  37: level37Questions,
+  38: level38Questions,
+  39: level39Questions,
+  40: level40Questions,
 };
 
 // Export toàn bộ đối tượng ra ngoài
