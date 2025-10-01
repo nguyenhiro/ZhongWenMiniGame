@@ -38,6 +38,28 @@ import level37Questions from './levels/level37.js';
 import level38Questions from './levels/level38.js';
 import level39Questions from './levels/level39.js';
 import level40Questions from './levels/level40.js';
+import level41Questions from './levels/level41.js';
+import level42Questions from './levels/level42.js';
+import level43Questions from './levels/level43.js';
+import level44Questions from './levels/level44.js';
+import level45Questions from './levels/level45.js';
+import level46Questions from './levels/level46.js';
+import level47Questions from './levels/level47.js';
+import level48Questions from './levels/level48.js';
+import level49Questions from './levels/level49.js';
+import level50Questions from './levels/level50.js';
+import level51Questions from './levels/level51.js';
+import level52Questions from './levels/level52.js';
+import level53Questions from './levels/level53.js';
+import level54Questions from './levels/level54.js';
+import level55Questions from './levels/level55.js';
+import level56Questions from './levels/level56.js';
+import level57Questions from './levels/level57.js';
+import level58Questions from './levels/level58.js';
+import level59Questions from './levels/level59.js';
+import level60Questions from './levels/level60.js';
+import level61Questions from './levels/level61.js';
+import level62Questions from './levels/level62.js';
 
 const questionsByLevel = {
   1: level1Questions,
@@ -80,6 +102,28 @@ const questionsByLevel = {
   38: level38Questions,
   39: level39Questions,
   40: level40Questions,
+  41: level41Questions,
+  42: level42Questions,
+  43: level43Questions,
+  44: level44Questions,
+  45: level45Questions,
+  46: level46Questions,
+  47: level47Questions,
+  48: level48Questions,
+  49: level49Questions,
+  50: level50Questions,
+  51: level51Questions,
+  52: level52Questions,
+  53: level53Questions,
+  54: level54Questions,
+  55: level55Questions,
+  56: level56Questions,
+  57: level57Questions,
+  58: level58Questions,
+  59: level59Questions,
+  60: level60Questions,
+  61: level61Questions,
+  62: level62Questions,
 };
 
 // Export toàn bộ đối tượng ra ngoài
