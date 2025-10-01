@@ -1,0 +1,337 @@
+<!DO<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết Lại Bài Đọc - Thử Thách Tiếng Trung</title>
+    
+    <style>
+        /* ==================================== */
+        /* TÙY CHỈNH BACKGROUND CHO LANDING PAGE */
+        /* ==================================== */
+        :root {
+            /* ĐƯỜNG DẪN ẢNH CỦA BẠN (CHẮC CHẮN ĐÚNG VỊ TRÍ) */
+            --landing-bg-image: url('images/brto.png'); 
+            /* Nếu file ảnh nằm trong thư mục images: url('images/brto.png'); */
+            --typing-game-color: #f39c12; /* Màu vàng cam */
+            --typing-accent-color: #008CBA; /* Màu xanh dương */
+        }
+
+        /* ==================================== */
+        /* CSS CHUNG (Body & Containers) */
+        /* ==================================== */
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            color: #333; 
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; 
+            transition: background-image 0.5s ease;
+        }
+
+        /* 🎯 SỬA LỖI NỀN ĐÈ: Lớp background image chỉ áp dụng khi Landing active */
+        body.landing-active {
+            /* Lớp phủ mờ (overlay) mỏng hơn để ảnh sáng hơn */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), var(--landing-bg-image);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .game-container {
+            /* Giữ nền trắng cho Game Container */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 750px;
+            box-sizing: border-box;
+        }
+
+        /* ==================================== */
+        /* CSS CHO LANDING PAGE */
+        /* ==================================== */
+        .landing-container {
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Shadow đậm hơn để nổi bật */
+            max-width: 650px;
+            width: 90%;
+            /* 🎯 SỬA LỖI: Loại bỏ màu nền tối tĩnh, để nền trong suốt hơn */
+            background-color: rgba(0, 0, 0, 0.4); 
+            text-align: center;
+            color: white;
+        }
+        .landing-container h1 {
+            color: var(--typing-game-color); 
+            margin-top: 0;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        /* ... (Các CSS khác giữ nguyên) ... */
+        
+        /* ==================================== */
+        /* CSS CHUNG CHO NÚT */
+        /* ==================================== */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            outline: none;
+            color: white;
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-start { background-color: var(--typing-game-color); }
+        .btn-start:hover { background-color: #e08e0b; }
+        .btn-return { background-color: #f44336; }
+        .btn-return:hover { background-color: #d32f2f; }
+        .btn-back { background-color: var(--typing-accent-color); }
+        .btn-back:hover { background-color: #007bb5; }
+        .btn-change-level { background-color: var(--typing-accent-color); }
+
+        /* ==================================== */
+        /* CSS CỦA GAME TYPING */
+        /* ==================================== */
+        h2 { color: #3498db; margin-bottom: 25px; }
+        #typing-source-text-container {
+            background-color: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 25px; 
+            border: 2px solid #3498db; text-align: left; min-height: 80px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        #typing-source-text {
+            font-size: 1.3em; font-family: 'SimSun', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50; margin: 0; white-space: pre-wrap; line-height: 1.6;
+        }
+        #typing-user-input {
+            width: 100%; padding: 15px; box-sizing: border-box; border: 2px solid #ccc; 
+            border-radius: 5px; font-size: 1.1em; resize: vertical;
+            font-family: 'SimSun', 'Microsoft YaHei', sans-serif; margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+        #typing-user-input:focus { border-color: var(--typing-game-color); outline: none; }
+        #typing-feedback { margin-top: 15px; font-size: 1.2em; font-weight: bold; min-height: 30px;}
+    </style>
+</head>
+<body>
+    
+    <div class="landing-container" id="typing-landing-page">
+        <h1>Viết Lại Đoạn Văn Được Cho Thật Chính Xác!</h1>
+        
+        <p class="description">
+            Luyện tập kỹ năng gõ và ghi nhớ. Bạn phải gõ lại chính xác đoạn văn tiếng Trung được cung cấp.
+        </p>
+        
+        <div id="level-selection-container" style="margin-top: 30px;">
+            <h3>Chọn cấp độ để chơi:</h3>
+            
+            <select id="typing-level-dropdown"></select>
+            
+            <button class="btn btn-start" id="startTypingLevelBtn">Bắt Đầu Chơi</button>
+            
+            <a href="index.html" class="btn btn-back">Quay lại Chọn Game</a>
+        </div>
+    </div>
+    
+    <div class="game-container" id="typing-game-container" style="display: none;">
+        <h1>Thử Thách Viết Lại Bài Đọc</h1>
+        <h2>Level <span id="typing-level-number">1</span></h2>
+
+        <div id="typing-source-text-container">
+            <p id="typing-source-text">Đang tải bài đọc...</p>
+        </div>
+
+        <textarea id="typing-user-input" rows="8" placeholder="Bắt đầu viết lại đoạn văn ở trên tại đây..."></textarea>
+
+        <button class="btn btn-start" id="typing-submit-button">Xác Nhận Bài Viết</button>
+        <p id="typing-feedback" style="margin-top: 15px; font-weight: bold; min-height: 30px;"></p>
+        
+        <a href="typing_game.html" class="btn btn-change-level">Đổi Level / Quay lại Chọn Level</a>
+    </div>
+
+    <script type="module">
+        import typingLevels from './typing_data.js';
+        
+        // --- 1. KHAI BÁO CHUNG ---
+        const body = document.body;
+        // Landing/Selection
+        const typingLandingPage = document.getElementById('typing-landing-page');
+        const levelDropdown = document.getElementById('typing-level-dropdown');
+        const startLevelButton = document.getElementById('startTypingLevelBtn');
+        const MAX_LEVELS = typingLevels.length; 
+        
+        // Game
+        const gameContainer = document.getElementById('typing-game-container');
+        const typingSourceTextEl = document.getElementById('typing-source-text');
+        const typingUserInputEl = document.getElementById('typing-user-input');
+        const typingSubmitButton = document.getElementById('typing-submit-button');
+        const typingFeedbackEl = document.getElementById('typing-feedback');
+        const typingLevelNumberEl = document.getElementById('typing-level-number');
+        
+        let currentTypingLevelIndex = 0;
+
+        // --- 2. HÀM QUẢN LÝ GIAO DIỆN LANDING/START ---
+        
+        function initTypingLandingPage() {
+            typingLandingPage.style.display = 'block';
+            gameContainer.style.display = 'none';
+            // Kích hoạt background cho Landing
+            body.classList.add('landing-active');
+
+            levelDropdown.innerHTML = ''; 
+            for (let i = 1; i <= MAX_LEVELS; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `Level ${i}`;
+                levelDropdown.appendChild(option);
+            }
+            
+            startLevelButton.addEventListener('click', startSelectedLevel);
+        }
+
+        function startSelectedLevel() {
+            const selectedLevel = parseInt(levelDropdown.value);
+            if (selectedLevel) {
+                typingLandingPage.style.display = 'none';
+                gameContainer.style.display = 'block';
+                // Hủy background Landing
+                body.classList.remove('landing-active');
+                
+                loadTypingLevel(selectedLevel - 1); 
+            }
+        }
+        
+        // --- 3. HÀM XỬ LÝ GAME ---
+        
+        window.loadTypingLevel = function(levelIndex) {
+            // ... (Logic tải level game giữ nguyên) ...
+            if (typingLevels.length === 0) {
+                typingFeedbackEl.textContent = "Lỗi: Không tìm thấy dữ liệu bài đọc.";
+                typingFeedbackEl.style.color = 'red';
+                typingSubmitButton.disabled = true;
+                typingUserInputEl.disabled = true;
+                return;
+            }
+
+            if (levelIndex < 0) levelIndex = 0;
+
+            if (levelIndex >= typingLevels.length) {
+                typingLevelNumberEl.textContent = MAX_LEVELS;
+                typingSourceTextEl.textContent = "Bạn đã hoàn thành tất cả các bài đọc!";
+                typingFeedbackEl.textContent = "🥳 Xin chúc mừng! Bạn là một bậc thầy gõ chữ!";
+                typingFeedbackEl.style.color = '#4CAF50';
+                typingSubmitButton.style.display = 'none';
+                typingUserInputEl.style.display = 'none';
+                return;
+            }
+            
+            currentTypingLevelIndex = levelIndex;
+            const sourceText = typingLevels[levelIndex]; 
+            
+            typingLevelNumberEl.textContent = levelIndex + 1;
+            typingSourceTextEl.textContent = sourceText;
+            typingUserInputEl.value = '';
+            typingFeedbackEl.textContent = 'Hãy viết lại đoạn văn tiếng Trung bên trên.';
+            typingFeedbackEl.style.color = '#333';
+            typingUserInputEl.disabled = false;
+            typingSubmitButton.disabled = false;
+            typingSubmitButton.textContent = 'Xác Nhận Bài Viết';
+            typingSubmitButton.style.display = 'inline-block';
+            typingUserInputEl.style.display = 'block';
+            typingUserInputEl.focus();
+        }
+
+        function checkTypingAnswer() {
+            typingSubmitButton.disabled = true; 
+            
+            const source = typingLevels[currentTypingLevelIndex]; 
+            const user = typingUserInputEl.value;
+            
+            const normalizedSource = source.trim(); 
+            const normalizedUser = user.trim();
+
+            if (normalizedUser === normalizedSource) {
+                typingFeedbackEl.textContent = "👍 Chính xác tuyệt đối! Chuẩn bị Level " + (currentTypingLevelIndex + 2) + "!";
+                typingFeedbackEl.style.color = '#2ecc71';
+                typingSubmitButton.textContent = 'Đã Hoàn Thành!';
+                
+                setTimeout(() => {
+                    loadTypingLevel(currentTypingLevelIndex + 1);
+                }, 1500); 
+
+            } else {
+                typingFeedbackEl.textContent = "❌ Sai! Bài viết chưa khớp hoàn toàn. Bạn phải viết lại từ đầu.";
+                typingFeedbackEl.style.color = '#e74c3c';
+                typingUserInputEl.value = '';
+                typingUserInputEl.focus();
+                
+                setTimeout(() => {
+                    typingSubmitButton.disabled = false;
+                }, 500); 
+            }
+        }
+
+        // --- 4. LOGIC KHỞI TẠO CHÍNH ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const levelFromURL = parseInt(urlParams.get('level'));
+            
+            if (!isNaN(levelFromURL) && levelFromURL >= 1) {
+                // Bắt đầu Game ngay
+                typingLandingPage.style.display = 'none';
+                gameContainer.style.display = 'block';
+                body.classList.remove('landing-active');
+                loadTypingLevel(levelFromURL - 1);
+            } else {
+                // Hiển thị Landing Page
+                initTypingLandingPage();
+            }
+            
+            typingSubmitButton.addEventListener('click', checkTypingAnswer);
+        });
+// Hàm này chỉ chặn duy nhất thao tác DÁN (Paste)
+function blockPasteOnly() {
+    const inputElement = document.getElementById('typing-user-input');
+    
+    // 1. Chặn sự kiện Paste (Ctrl+V hoặc chuột phải > Paste) trên ô nhập liệu
+    inputElement.addEventListener('paste', (e) => {
+        e.preventDefault();
+        console.warn("Dán (Paste) bị cấm. Vui lòng gõ để học tập hiệu quả!");
+        
+        // (Tùy chọn) Hiển thị thông báo ngắn gọn cho người dùng
+        const feedback = document.getElementById('typing-feedback');
+        feedback.textContent = "❌ Vui lòng gõ, không dán (Paste)!";
+        feedback.style.color = '#e74c3c';
+        setTimeout(() => {
+            feedback.textContent = 'Hãy viết lại đoạn văn tiếng Trung bên trên.';
+            feedback.style.color = '#333';
+        }, 2000);
+    });
+    
+    // Các thao tác Copy (Ctrl+C), Cắt (Ctrl+X), và Chọn văn bản được giữ nguyên.
+}
+// --- 4. LOGIC KHỞI TẠO CHÍNH ---
+document.addEventListener('DOMContentLoaded', () => {
+    // ... (các logic khởi tạo khác) ...
+    
+    typingSubmitButton.addEventListener('click', checkTypingAnswer);
+    
+    // 🎯 GỌI HÀM MỚI CHỈ KHÓA PASTE
+    blockPasteOnly(); 
+});
+    </script>
+</body>
+</html>
