@@ -187,6 +187,25 @@
             border-color: #4CAF50;
             box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
         }
+    /* Tùy chỉnh màu nút chuyển đổi sang Typing Game */
+.quiz-to-typing-btn {
+    background-color: #f39c12; /* Màu vàng cam của Typing Game */
+    margin: 15px auto; /* Tăng khoảng cách để nổi bật */
+    display: block; /* Đảm bảo nút chiếm hết chiều rộng */
+    max-width: 300px; /* Giới hạn chiều rộng nút */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-to-typing-btn:hover {
+    background-color: #e08e0b;
+    transform: translateY(-2px);
+}
     </style>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EE00XE0TZ"></script>
@@ -205,18 +224,18 @@
         <main>
             <p class="description">
                 Bạn đã sẵn sàng cho một thử thách từ vựng chưa? 
-                Kiểm tra kiến thức từ vựng của bạn với những câu hỏi đa dạng 
-                và hấp dẫn. Hãy cùng khám phá!
+                Kiểm tra kiến thức từ vựng của bạn theo chuẩn giáo trình Hán Ngữ. Hãy cùng khám phá!
             </p>
             <div class="buttons">
-                <button class="btn btn-start" id="startGameBtn">Bắt Đầu Chơi</button>
+                <button class="btn btn-start" id="startGameBtn">Game Từ Vựng</button>
+                <a href="typing_game.html" class="btn quiz-to-typing-btn">Game Chép Câu</a>
                 <button class="btn btn-how-to" id="showInstructionsBtn">Hướng Dẫn Chơi</button>
             </div>
-
             <div id="level-selection-container" style="display:none; margin-top: 20px;">
                 <h3>Chọn cấp độ để chơi:</h3>
                 <select id="level-dropdown" class="btn"></select>
                 <button class="btn btn-start" onclick="startSelectedLevel()">Chơi</button>
+                <a href="index.html" class="btn quiz-to-typing-btn">Quay lại Trang Chủ</a>
             </div>
         </main>
         <footer>
@@ -481,7 +500,3 @@
     </script>
 </body>
 </html>
-
-
-
-
