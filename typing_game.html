@@ -1,4 +1,4 @@
-<!DO<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -111,6 +111,9 @@
             background-color: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 25px; 
             border: 2px solid #3498db; text-align: left; min-height: 80px;
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            /* 🎯 CẬP NHẬT: Thêm max-height và overflow-y để tạo thanh cuộn */
+            max-height: 200px;
+            overflow-y: auto;
         }
         #typing-source-text {
             font-size: 1.3em; font-family: 'SimSun', 'Microsoft YaHei', sans-serif;
@@ -284,6 +287,28 @@
             }
         }
 
+        // Hàm này chỉ chặn duy nhất thao tác DÁN (Paste)
+        function blockPasteOnly() {
+            const inputElement = document.getElementById('typing-user-input');
+            
+            // 1. Chặn sự kiện Paste (Ctrl+V hoặc chuột phải > Paste) trên ô nhập liệu
+            inputElement.addEventListener('paste', (e) => {
+                e.preventDefault();
+                console.warn("Dán (Paste) bị cấm. Vui lòng gõ để học tập hiệu quả!");
+                
+                // (Tùy chọn) Hiển thị thông báo ngắn gọn cho người dùng
+                const feedback = document.getElementById('typing-feedback');
+                feedback.textContent = "❌ Vui lòng gõ, không dán (Paste)!";
+                feedback.style.color = '#e74c3c';
+                setTimeout(() => {
+                    feedback.textContent = 'Hãy viết lại đoạn văn tiếng Trung bên trên.';
+                    feedback.style.color = '#333';
+                }, 2000);
+            });
+            
+            // Các thao tác Copy (Ctrl+C), Cắt (Ctrl+X), và Chọn văn bản được giữ nguyên.
+        }
+
         // --- 4. LOGIC KHỞI TẠO CHÍNH ---
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
@@ -301,37 +326,10 @@
             }
             
             typingSubmitButton.addEventListener('click', checkTypingAnswer);
+            
+            // 🎯 GỌI HÀM MỚI CHỈ KHÓA PASTE
+            blockPasteOnly(); 
         });
-// Hàm này chỉ chặn duy nhất thao tác DÁN (Paste)
-function blockPasteOnly() {
-    const inputElement = document.getElementById('typing-user-input');
-    
-    // 1. Chặn sự kiện Paste (Ctrl+V hoặc chuột phải > Paste) trên ô nhập liệu
-    inputElement.addEventListener('paste', (e) => {
-        e.preventDefault();
-        console.warn("Dán (Paste) bị cấm. Vui lòng gõ để học tập hiệu quả!");
-        
-        // (Tùy chọn) Hiển thị thông báo ngắn gọn cho người dùng
-        const feedback = document.getElementById('typing-feedback');
-        feedback.textContent = "❌ Vui lòng gõ, không dán (Paste)!";
-        feedback.style.color = '#e74c3c';
-        setTimeout(() => {
-            feedback.textContent = 'Hãy viết lại đoạn văn tiếng Trung bên trên.';
-            feedback.style.color = '#333';
-        }, 2000);
-    });
-    
-    // Các thao tác Copy (Ctrl+C), Cắt (Ctrl+X), và Chọn văn bản được giữ nguyên.
-}
-// --- 4. LOGIC KHỞI TẠO CHÍNH ---
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (các logic khởi tạo khác) ...
-    
-    typingSubmitButton.addEventListener('click', checkTypingAnswer);
-    
-    // 🎯 GỌI HÀM MỚI CHỈ KHÓA PASTE
-    blockPasteOnly(); 
-});
     </script>
 </body>
 </html>
