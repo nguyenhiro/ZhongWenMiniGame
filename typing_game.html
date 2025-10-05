@@ -186,12 +186,35 @@
         
         let currentTypingLevelIndex = 0;
 
-        // --- 2. HÀM QUẢN LÝ GIAO DIỆN LANDING/START ---
+        // ===============================================
+        // 🎯 HÀM MỚI: CHUẨN HÓA VĂN BẢN ĐỂ BỎ QUA DẤU CÂU VÀ KHOẢNG TRẮNG
+        // ===============================================
+        /**
+         * Chuẩn hóa văn bản bằng cách loại bỏ dấu câu phổ biến (tiếng Hán, tiếng Việt, tiếng Anh),
+         * sau đó loại bỏ tất cả khoảng trắng, bao gồm cả xuống dòng, để so sánh chỉ dựa trên ký tự.
+         * @param {string} text - Văn bản đầu vào.
+         * @returns {string} - Văn bản đã được chuẩn hóa.
+         */
+        function normalizeText(text) {
+            // Biểu thức chính quy loại bỏ dấu câu phổ biến
+            const punctuationRegex = /[.,\/#!$%\^&\*;:{}=\-_`~()？。，！《》【】\u3000]/g; 
+            
+            // 1. Loại bỏ dấu câu
+            let cleanedText = text.replace(punctuationRegex, '');
+            
+            // 2. Loại bỏ tất cả khoảng trắng (space, tab, newline)
+            cleanedText = cleanedText.replace(/\s+/g, '');
+            
+            // Chuyển về chữ thường để đảm bảo tính nhất quán (nếu bạn có cả Pinyin)
+            return cleanedText.toLowerCase().trim();
+        }
+
+
+        // --- 2. HÀM QUẢN LÝ GIAO DIỆN LANDING/START (GIỮ NGUYÊN) ---
         
         function initTypingLandingPage() {
             typingLandingPage.style.display = 'block';
             gameContainer.style.display = 'none';
-            // Kích hoạt background cho Landing
             body.classList.add('landing-active');
 
             levelDropdown.innerHTML = ''; 
@@ -210,17 +233,15 @@
             if (selectedLevel) {
                 typingLandingPage.style.display = 'none';
                 gameContainer.style.display = 'block';
-                // Hủy background Landing
                 body.classList.remove('landing-active');
                 
                 loadTypingLevel(selectedLevel - 1); 
             }
         }
         
-        // --- 3. HÀM XỬ LÝ GAME ---
+        // --- 3. HÀM XỬ LÝ GAME (CẬP NHẬT) ---
         
         window.loadTypingLevel = function(levelIndex) {
-            // ... (Logic tải level game giữ nguyên) ...
             if (typingLevels.length === 0) {
                 typingFeedbackEl.textContent = "Lỗi: Không tìm thấy dữ liệu bài đọc.";
                 typingFeedbackEl.style.color = 'red';
@@ -263,10 +284,16 @@
             const source = typingLevels[currentTypingLevelIndex]; 
             const user = typingUserInputEl.value;
             
-            const normalizedSource = source.trim(); 
-            const normalizedUser = user.trim();
-
+            // ===============================================
+            // 🎯 LOGIC SO SÁNH ĐÃ SỬA ĐỔI
+            // ===============================================
+            const normalizedSource = normalizeText(source); 
+            const normalizedUser = normalizeText(user);
+            
+            // So sánh hai chuỗi đã được chuẩn hóa (không còn dấu câu hoặc khoảng trắng)
             if (normalizedUser === normalizedSource) {
+            // ===============================================
+                
                 typingFeedbackEl.textContent = "👍 Chính xác tuyệt đối! Chuẩn bị Level " + (currentTypingLevelIndex + 2) + "!";
                 typingFeedbackEl.style.color = '#2ecc71';
                 typingSubmitButton.textContent = 'Đã Hoàn Thành!';
@@ -287,16 +314,14 @@
             }
         }
 
-        // Hàm này chỉ chặn duy nhất thao tác DÁN (Paste)
+        // Hàm này chỉ chặn duy nhất thao tác DÁN (Paste) (GIỮ NGUYÊN)
         function blockPasteOnly() {
             const inputElement = document.getElementById('typing-user-input');
             
-            // 1. Chặn sự kiện Paste (Ctrl+V hoặc chuột phải > Paste) trên ô nhập liệu
             inputElement.addEventListener('paste', (e) => {
                 e.preventDefault();
                 console.warn("Dán (Paste) bị cấm. Vui lòng gõ để học tập hiệu quả!");
                 
-                // (Tùy chọn) Hiển thị thông báo ngắn gọn cho người dùng
                 const feedback = document.getElementById('typing-feedback');
                 feedback.textContent = "❌ Vui lòng gõ, không dán (Paste)!";
                 feedback.style.color = '#e74c3c';
@@ -305,29 +330,24 @@
                     feedback.style.color = '#333';
                 }, 2000);
             });
-            
-            // Các thao tác Copy (Ctrl+C), Cắt (Ctrl+X), và Chọn văn bản được giữ nguyên.
         }
 
-        // --- 4. LOGIC KHỞI TẠO CHÍNH ---
+        // --- 4. LOGIC KHỞI TẠO CHÍNH (GIỮ NGUYÊN) ---
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const levelFromURL = parseInt(urlParams.get('level'));
             
             if (!isNaN(levelFromURL) && levelFromURL >= 1) {
-                // Bắt đầu Game ngay
                 typingLandingPage.style.display = 'none';
                 gameContainer.style.display = 'block';
                 body.classList.remove('landing-active');
                 loadTypingLevel(levelFromURL - 1);
             } else {
-                // Hiển thị Landing Page
                 initTypingLandingPage();
             }
             
             typingSubmitButton.addEventListener('click', checkTypingAnswer);
             
-            // 🎯 GỌI HÀM MỚI CHỈ KHÓA PASTE
             blockPasteOnly(); 
         });
     </script>
