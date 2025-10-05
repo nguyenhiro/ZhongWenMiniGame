@@ -60,6 +60,7 @@ import level59Questions from './levels/level59.js';
 import level60Questions from './levels/level60.js';
 import level61Questions from './levels/level61.js';
 import level62Questions from './levels/level62.js';
+import level63Questions from './levels/level63.js';
 
 const questionsByLevel = {
   1: level1Questions,
@@ -124,7 +125,9 @@ const questionsByLevel = {
   60: level60Questions,
   61: level61Questions,
   62: level62Questions,
+  63: level63Questions,
 };
 
 // Export toàn bộ đối tượng ra ngoài
 export { questionsByLevel };
+
